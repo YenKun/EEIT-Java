@@ -1,0 +1,19 @@
+package practiceRandom;
+
+public class RandomPracticeEx1 {
+
+	public static void main(String[] args) {
+		int[] dog;
+		class cat{
+			void bark() = {
+					System.out.println("meow");
+			}
+		}
+		a = new dog[8];
+		a[0] = new cat();
+		a[1] = new cat();
+				
+
+	}
+
+}

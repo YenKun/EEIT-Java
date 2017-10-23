@@ -1,0 +1,19 @@
+package tw.yenkun.myproject.conditional;
+
+public class IfNestEx1 {
+	public static void main(String[] args) {
+		int value = (int) (Math.random() * 200 - 100);
+		if (value > 0 && value % 2 == 0) {
+			System.out.println("value=" + value + "?Ç∫Ê≠??Å∂?ï∏");
+		} else if (value < 0 && value % 2 == 0) {
+			System.out.println("value=" + value + "?Ç∫Ë≤†ÂÅ∂?ï∏");
+		} else if (value > 0 && value % 2 != 0) {
+			System.out.println("value=" + value + "?Ç∫Ê≠?Â•áÊï∏");
+		} else if (value < 0 && value % 2 != 0) {
+			System.out.println("value=" + value + "?Ç∫Ë≤†Â?áÊï∏");
+		} else {
+			System.out.println("value?ºÁÇ∫" + value);
+		}
+	}
+
+}

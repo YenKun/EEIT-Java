@@ -1,0 +1,35 @@
+package practiceRandom;
+
+public class practice20171023 {
+
+	public static void main(String[] args) {
+
+		 class dog {
+			String name;
+			String color;
+			int dogNum;
+
+			void bark() {
+				System.out.println("Roof Roof");
+			}
+
+			void sleep() {
+				System.out.println("ZZZ");
+			}
+
+			dog(int dogNum, String name, String color) {
+				this.dogNum = dogNum;
+				this.name = name;
+				this.color = color;
+			}
+
+			class testDog {
+
+				dog a = new dog(1, "lucky", "grey");
+				dog b = new dog(2, "bard", "brown");
+				a.bark;
+			}
+		}
+
+	}
+}

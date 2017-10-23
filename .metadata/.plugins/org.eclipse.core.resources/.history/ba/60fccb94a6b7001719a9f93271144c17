@@ -1,0 +1,22 @@
+//package practiceRandom;
+class Books{
+	String title;
+	String author;
+}
+
+public class RandomPracticeEx1 {
+
+	public static void main(String[] args) {
+		Books[] myBooks = new Books[3];
+		int x = 0;
+		myBook[0].title="000";
+		mybook[1].title="111";
+		mybook[2].title="222";
+		
+		
+
+				
+
+	}
+
+}

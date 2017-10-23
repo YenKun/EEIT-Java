@@ -1,0 +1,30 @@
+package practiceLoopQuiz;
+
+public class quizEx9 {
+
+	public static void main(String[] args) {
+		int a, b, c;
+		for (a = 1; a < 10; a++) {
+			for (b = 0; b < 10; b++) {
+				for (c = 0; c < 10; c++) {
+					if ((a * a * a) + (b * b * b) + (c * c * c) == (100 * a) + (10 * b) + c) {
+						System.out.println(100 * a + 10 * b + c);
+					}
+				}
+			}
+		}
+		
+		
+		for (int i=100;i<1000;i++) {
+			int a1=i/100;
+			int k=i%100;
+			int b1 =k/10;
+			int c1=k%10;
+			if ((a1 * a1 * a1) + (b1 * b1 * b1) + (c1 * c1 * c1) == (100 * a1) + (10 * b1) + c1) {
+				System.out.println(100 * a1 + 10 * b1 + c1);
+			}
+		}
+
+	}
+	
+}

@@ -10,16 +10,18 @@ public class practiceIfElseHw1 {
 		int b = (int) (Math.random() * 10 + 1);
 		int c = (int) (Math.random() * 10 + 1);
 
-		int D = b * b - 4 * a * c;
+		int D = (b * b) - (4 * a * c);
 		double Dsqr = Math.sqrt(D);
+		
+		System.out.println(~b+1);
 
 		if (D < 0) {
 			System.out.printf("%dx^2+%dx+%d\n沒有實根\n", a, b, c);
 		} else if (D == 0) {
-			System.out.printf("%dx^2+%dx+%d\n有重根%.2f\n", a, b, c, (double) (~b + 1) / (2 * a));
+			System.out.printf("%dx^2+%dx+%d\n有重根%.2f\n", a, b, c, (double) (~b + 1) / (2.0 * a));
 		} else {
-			System.out.printf("%dx^2+%dx+%d\n有兩相異實根%.2f,%.2f\n", a, b, c, (double) (~b + 1) + Dsqr / (2 * a),
-					(double) (~b + 1) - Dsqr / (2 * a));
+			System.out.printf("%dx^2+%dx+%d\n有兩相異實根%.2f,%.2f\n", a, b, c,  ((~b + 1) + Dsqr) / (2.0 * a),
+					 ((~b + 1) - Dsqr) / (2 * a));
 		}
 
 	}
