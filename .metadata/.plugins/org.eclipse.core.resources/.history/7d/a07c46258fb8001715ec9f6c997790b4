@@ -1,0 +1,23 @@
+package oopMethod;
+class f1{
+	
+	int a = 1;
+	static int b = 2;
+	
+	void play(int c) {
+		int d = 4;
+		System.out.printf("%d%d%d%d\n",a,b,c,d);
+	}
+}
+
+public class testStaticEx2 {
+
+	public static void main(String[] args) {
+		
+		f1 function = new f1();
+		function.play(3);
+		
+
+	}
+
+}

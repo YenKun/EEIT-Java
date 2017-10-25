@@ -1,0 +1,25 @@
+package practiceHomework;
+
+class F {
+	int fib(int n);
+	int k=1;
+	long play() {
+		if(n<=2) {
+			return n-1;
+		}else {
+			
+		}
+	}
+
+		
+	}
+}
+
+public class practiceRecursiveFibonacciHw1 {
+	public static void main(String[] args) {
+		
+		System.out.println(new F(50));
+		
+	}
+
+}

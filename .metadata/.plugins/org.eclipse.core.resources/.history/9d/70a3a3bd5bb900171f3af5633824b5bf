@@ -1,0 +1,13 @@
+package oopMethod;
+
+public class testStringEx1 {
+
+	public static void main(String[] args) {
+		String data="abcdefghabcdefgh";
+		System.out.println(data.length());
+		System.out.println(data.charAt(5));
+		System.out.println(data.toUpperCase());
+
+	}
+
+}

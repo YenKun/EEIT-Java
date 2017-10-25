@@ -1,0 +1,34 @@
+package oopMethod;
+
+class build{
+	int name;
+	int age;
+	build(int x,int y){
+		System.out.println("I am constructor");
+		this.name = x;
+		this.age = y;
+	}
+	 void play() {
+		 System.out.println("play with me");
+	 }
+}
+
+public class testCallConstructorEx1 {
+
+	public static void main(String[] args) {
+		build start = new build(21,87);
+		build start1 = new build(12,47);
+		build start2 = new build(45,8);
+		build start3 = new build(21,7);
+		
+		start.play();
+		start.play();
+		start.play();
+		start.play();
+		start.play();
+		System.out.println(start.name + start.age);
+		System.out.println("finished");
+
+	}
+
+}

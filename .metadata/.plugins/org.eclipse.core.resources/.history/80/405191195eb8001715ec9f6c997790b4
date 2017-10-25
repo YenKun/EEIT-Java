@@ -1,0 +1,19 @@
+package oopMethod;
+
+class person{
+	void sayHello() {
+		System.out.println("Hello!!");
+	}
+} 
+
+
+
+public class testCallMethodEx1 {
+
+	public static void main(String[] args) {
+		person mike = new person();
+		mike.sayHell();
+
+	}
+
+}

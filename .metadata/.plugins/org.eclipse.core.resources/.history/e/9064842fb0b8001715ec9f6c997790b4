@@ -1,0 +1,15 @@
+package practiceLoopQuiz;
+
+public class quizEx11 {
+
+	public static void main(String[] args) {
+		int[] scores = {20,21,22};
+		for(int score : scores) {
+			System.out.println(score);
+		}
+
+
+
+
+	}
+}

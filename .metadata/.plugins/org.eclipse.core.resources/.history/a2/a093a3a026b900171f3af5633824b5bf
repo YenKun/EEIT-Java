@@ -1,0 +1,21 @@
+package oopMethod;
+
+public class testThisEx2 {
+	
+	int level;
+	
+	public testThisEx2(byre g) {
+		
+		System.out.println("First Constructor");	
+	}
+	
+	public testThisEx2() {
+		System.out.println("level:" + level);
+	}
+
+	public static void main(String[] args) {
+		testThisEx2 k = new testThisEx2(1.0);
+
+	}
+
+}

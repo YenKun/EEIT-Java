@@ -1,0 +1,20 @@
+package oopMethod;
+
+class calculator1 {
+	void plus(int x, int y) {
+		System.out.println("x+y=" + (x + y));
+	}
+
+	void plus(double x, double y) {
+		System.out.println("x+y=" + (x + y));
+	}
+}
+
+public class testOverrideEx1 {
+
+	public static void main(String[] args) {
+		new calculator1().plus(6,8);
+		new calculator1().plus(6.51,8);
+	}
+
+}
