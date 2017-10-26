@@ -8,7 +8,7 @@ public class quizEx2 {
 		 * 質因數分解
 		 */
 		
-		int a = (int)(Math.random()*100+1);
+		int a = 128;//(int)(Math.random()*100+1);
 		int k = a;
 		for (int b = 2; b <= a; b++) {
 			if (a % b == 0) {
