@@ -1,0 +1,33 @@
+package practiceLoopQuiz;
+
+class setDeck {
+	String[] color = { "Spade", "Heart", "Diamond", "Club" };
+	String[] number = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+	String[] deck = new String[52];
+	int[] deckCount = new int[52];
+
+	setDeck() {
+		for (int j = 0; j < color.length; j++) {
+			for (int i = 0; i < number.length; i++) {
+				deck[i+13*j] = color[j] + number[i];
+			}
+		}
+		for(String k:deck) {
+			System.out.println(k);
+		}
+	}
+
+	void getDeck() {
+
+	}
+
+}
+
+public class quizEx12 {
+
+	public static void main(String[] args) {
+
+		setDeck action = new setDeck();
+
+	}
+}

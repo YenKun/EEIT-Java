@@ -1,0 +1,10 @@
+package oop.Package;
+
+public class testPackageNImport {
+	void sayHi() {
+		System.out.println("Que tal");
+	}
+	void sayGoodbye() {
+		System.out.println("Hasta la vista");
+	}
+}

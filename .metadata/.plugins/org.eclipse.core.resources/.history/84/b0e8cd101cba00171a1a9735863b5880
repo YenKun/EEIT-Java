@@ -1,0 +1,30 @@
+package oop.Inheritance;
+
+class Fish{
+	Fish(){
+		
+	}
+	Fish(String name){
+		this.name = name;
+	}
+	String name = "nemo";
+	void swim() {
+		System.out.println(name + " swin under the sea");
+	}
+}
+
+class Shark extends Fish{
+	Shark(){
+		super("Mary");
+	}
+}
+
+public class testInheritanceEx2 {
+
+	public static void main(String[] args) {
+		Shark TigerShark = new Shark();
+		TigerShark.swim();
+
+	}
+
+}

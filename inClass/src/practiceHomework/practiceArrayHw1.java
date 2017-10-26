@@ -37,7 +37,10 @@ class arrayData {
 	void printNumber() {
 
 		for (int c = 0; c < num.length; c++) {
-			System.out.printf("%6d:%5d\n", num[c], count[c]);
+			System.out.printf("%6d:%5d\t", num[c], count[c]);
+			if((c+1)%7==0) {
+				System.out.println();
+			}
 		}
 
 	}

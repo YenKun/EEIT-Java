@@ -378,3 +378,113 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SESSION 2017-10-26 09:22:05.603 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-26 09:22:21.906
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Student'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-26 09:24:44.697
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-26 09:24:44.697
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2017-10-26 09:24:45.211
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-26 10:08:26.537
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-10-26 10:08:26.537
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.501
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.ws.consumption.ui.doc.user_1.0.700.v201309242123 [550]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.501
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jdt.doc.user_3.13.50.v20171004-1030 [409]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.501
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.ws.axis2.ui.doc.user_1.0.200.v201309242118 [546]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.501
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.command.env.doc.user_1.5.400.v201309242123 [834]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.516
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.jsdt.doc_2.0.200.v201610220243 [881]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.532
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.dtdeditor.doc.user_1.0.700.v201208081537 [857]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.532
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.j2ee.doc.user_1.1.400.v201008122207 [483]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.532
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.7.1.v20170630-0820 [725]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.547
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.xmleditor.doc.user_1.0.700.v201707252002 [952]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.547
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.xsdeditor.doc.user_1.0.800.v201707252002 [955]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.547
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.ejb.doc.user_1.1.301.v201105130955 [478]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.547
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.ws.axis.ui.doc.user_1.1.200.v201309242123 [539]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.563
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.wsdl.ui.doc.user_1.0.850.v201309242123 [938]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.563
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.webtools.doc.user_1.0.500.v201208081537 [928]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.563
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.server.ui.doc.user_1.1.600.v201309182117 [915]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.579
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.pde.doc.user_3.13.1.v20171009-0537 [702]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.579
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.ws.doc.user_1.0.700.v201612121628 [560]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.579
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.wsi.ui.doc.user_1.0.750.v201309242123 [942]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.579
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jst.server.ui.doc.user_1.0.600.v201309182117 [528]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 2 0 2017-10-26 10:49:40.594
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.sse.doc.user_1.1.100.v201208081537 [918]'. The index should be rebuilt with Lucene 6.1.
+
+!ENTRY org.eclipse.help.base 4 4 2017-10-26 10:49:47.115
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2017-10-26 10:49:47.115
+!MESSAGE Help document /org.eclipse.wst.jsdt.doc/reference/extension-points/org_eclipse_wst_jsdt_core_codeFormatter.html cannot be opened.

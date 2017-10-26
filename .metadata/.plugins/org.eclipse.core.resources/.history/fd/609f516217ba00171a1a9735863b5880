@@ -1,0 +1,27 @@
+package oop.Inheritance;
+
+class child{
+	String name = "John";
+	void walk(){
+		System.out.println("walk:" + name);
+	}
+			
+}
+
+class parents extends child{
+	void play() {
+		System.out.println("Play Games");
+	}
+}
+
+public class testInheritanceEx1 {
+
+	public static void main(String[] args) {
+		parents x = new parents();
+		x.name = "mike";
+		x.walk();
+		x.play();
+
+	}
+
+}

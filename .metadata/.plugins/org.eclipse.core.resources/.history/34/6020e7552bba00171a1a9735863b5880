@@ -1,0 +1,27 @@
+package practiceLoopQuiz;
+
+class setDeck{
+	String[] color = {"Spade","Heart","Diamond","Club"};
+	String[] number = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+}
+
+class getCard{
+	void getColor() {
+		for(int i=0;i<4;i++) {			
+			for(int j=0;j<13;j++) {
+				int color = (int)(Math.random()*4);
+				int number =(int)(Math.random()*13);
+			}
+		}
+	}
+}
+
+public class quizEx12 {
+
+	public static void main(String[] args) {
+
+
+
+
+	}
+}
