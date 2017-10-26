@@ -4,13 +4,6 @@ package practiceLoopQuiz;
  * 洗牌程式
  */
 
-
-
-/*
- * 方法一
- * 
- */
-
 class setDeck1 {
 	String[] color = { "黑桃", "愛心", "方塊", "梅花" };
 	String[] number = { " A", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", "10", " J", " Q", " K" };

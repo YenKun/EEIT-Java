@@ -4,13 +4,6 @@ package practiceLoopQuiz;
  * 洗牌程式
  */
 
-
-
-/*
- * 方法一
- * 
- */
-
 class setDeck1 {
 	String[] color = { "黑桃", "愛心", "方塊", "梅花" };
 	String[] number = { " A", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", "10", " J", " Q", " K" };
@@ -69,7 +62,7 @@ class setDeck2 {
 	}
 
 	void getDeckb() {
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 1; i++) {
 			String temp;
 			int a1 = (int) (Math.random() * 52);
 			int a2 = (int) (Math.random() * 52);
@@ -95,8 +88,6 @@ public class quizEx12 {
 	public static void main(String[] args) {
 
 		setDeck1 action = new setDeck1();
-		System.out.println("方法1");
-		System.out.println("\n\n");
 		action.getDeck();
 		System.out.println("\n\n");
 		System.out.println("方法2");
