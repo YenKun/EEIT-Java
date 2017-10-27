@@ -1,0 +1,32 @@
+package practiceQuiz;
+
+import java.util.Scanner;
+
+public class quizEx15 {
+
+	public static void main(String[] args) {
+
+		int[][] chess = new int[8][8];
+		int[][] chessCount = new int[12][12];
+
+		for (int i = 2; i < 10; i++) {
+			for (int j = 2; j < 10; j++) {
+				chessCount[i][j] = 0;
+			}
+		}
+		int X = 3;
+		int Y = 3;
+		chess[X][Y] = 1;
+		chessCount[X + 2][Y + 2]++;
+
+		
+
+		for (int a[] : chess) {
+			for (int b : a) {
+				System.out.printf("%2d ", b);
+			}
+			System.out.println();
+		}
+
+	}
+}

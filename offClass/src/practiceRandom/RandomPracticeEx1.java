@@ -1,27 +1,23 @@
 package practiceRandom;
-class Books{
-	String title;
-	String author;
+class Bank{
+	Bank(){
+		
+	}
+	Bank(int...t){
+		System.out.println("Start");
+	}
+	Bank(Integer c){
+		System.out.println("Finished");
+	}
 }
 
 public class RandomPracticeEx1 {
 
 	public static void main(String[] args) {
-		Books[] myBooks = new Books[] {new Books(),new Books()};
-		Books[] eBooks=myBooks;
-		int x = 0;
-//		myBooks[0] = new Books();
-//		myBooks[1] = new Books();
-//		myBooks[2] = new Books();
-//		eBooks[0]= myBooks[1];
-//		
-		myBooks[0].title="000";
-		myBooks[1].title="111";
-		myBooks[2].title="222";
-		
-		
-
-				
+		Integer k = 5;
+		Integer p = 56;
+		Integer t = 1;
+		Bank ss = new Bank(k,p,t);
 
 	}
 

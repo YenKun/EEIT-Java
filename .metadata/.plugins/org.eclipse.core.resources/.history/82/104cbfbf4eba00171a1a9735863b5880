@@ -1,0 +1,18 @@
+package practiceRandom;
+class Bank{
+	Bank(){
+		
+	}
+	Bank(int t){
+		System.out.println(t);
+	}
+}
+
+public class RandomPracticeEx1 {
+
+	public static void main(String[] args) {
+		Bank ss = new Bank("5");
+
+	}
+
+}
