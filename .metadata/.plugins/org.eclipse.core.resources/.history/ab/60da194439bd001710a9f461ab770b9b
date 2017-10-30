@@ -1,0 +1,24 @@
+package practiceQuiz;
+
+public class quizEx15 {
+
+	public static void main(String[] args) {
+		
+		int[] weddle = new int[3];
+		int candy = (int)(Math.random()*100+1);
+		
+		weddle[0] = (int)(Math.random()*10+1);
+		
+		int evo = candy/12;
+		int candy = evo%12 + evo;
+		weddle[1] = candy/12;
+		
+		int x = 45213;
+		String X = new Integer.toString(x);
+		System.out.println(X);
+		
+
+
+
+	}
+}

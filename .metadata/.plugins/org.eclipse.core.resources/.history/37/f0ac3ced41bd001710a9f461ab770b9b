@@ -1,0 +1,24 @@
+package practiceQuiz;
+
+public class quizEx15 {
+
+	public static void main(String[] args) {
+		int n = 5;
+		int[][] array = new int[n][2*n-1];
+		
+		for(int i =0;i<array.length;i++) {
+			for(int j = 0;j<array[i].length;j++) {
+				array[i][j] = array[i-1][j-1]+array[i-1][j+1];
+			}
+		}
+		
+		for(int a[]: array) {
+			for(int b :a) {
+				System.out.print(b);
+				
+			}
+		}
+
+
+	}
+}

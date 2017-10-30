@@ -1,0 +1,20 @@
+package practiceQuiz;
+
+public class quizEx15 {
+
+	public static void main(String[] args) {
+		
+
+		
+		int x = 45213;
+		
+		Integer X = 12343;
+		String A = X.toString();
+		String B = "adaf\ngdx";
+		System.out.println(A);
+		System.out.println(B.charAt(6));
+
+
+
+	}
+}

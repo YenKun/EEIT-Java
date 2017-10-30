@@ -1,0 +1,18 @@
+package practiceQuiz;
+
+public class quizEx15 {
+
+	public static void main(String[] args) {
+		
+
+		
+		int x = 45213;
+		Integer X = x;
+		String A = X.toString();
+		System.out.println(A);
+		
+
+
+
+	}
+}
