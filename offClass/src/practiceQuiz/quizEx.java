@@ -1,10 +1,50 @@
 package practiceQuiz;
 
-public class quizEx {
+interface A{
+	void doAStuff();
+}
+interface B extends A{
+	void doBStuff();
+}
+interface C extends A ,B{	//¦h­«Ä~©Ó?
+	void doCstuff();
+}
 
-	public static void main(String[] args) {
+interface C1 extends A,C{
+	void doC1Stuff();
+}
+
+class D implements C1,A,B,C{
+
+	@Override
+	public void doAStuff() {
+		// TODO Auto-generated method stub
 		
+	}
 
+	@Override
+	public void doBStuff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void doCstuff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void doC1Stuff() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class quizEx{
+	public static void main(String [] args) {
+		
 
 
 

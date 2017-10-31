@@ -1,0 +1,19 @@
+package practiceQuiz;
+
+interface Foo {}
+class Alpha implements Foo{}
+class Beta extends Alpha{}
+//class Delta extends Beta{}
+
+
+public class quizEx extends Beta{
+	public static void main(String [] args) {
+		Alpha x = new Alpha();
+		Foo f =(Beta)x;
+		
+
+
+
+
+	}
+}

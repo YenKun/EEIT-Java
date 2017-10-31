@@ -1,0 +1,14 @@
+package practiceQuiz;
+
+
+
+
+public class quizEx extends child{
+	public static void main(String [] args) {
+		
+
+
+
+
+	}
+}

@@ -1,0 +1,23 @@
+package exceptionhandling;
+
+public class exceptionHandlingEx1 {
+
+	public void f(int x,int y) {
+		
+		try {
+		System.out.println(x/y);
+		}catch(ArithmeticException e) {
+			System.out.println("Hello");
+			System.out.println(e);
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+	
+		exceptionHandlingEx1 a = new exceptionHandlingEx1();
+		a.f(6,0);
+
+	}
+
+}

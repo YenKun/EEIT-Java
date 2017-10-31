@@ -1,0 +1,39 @@
+package practiceQuiz;
+
+class Rock{
+//	Rock(){
+//		System.out.println(2);
+//	}
+	Rock(String a){
+		System.out.println(a);
+	}
+
+}
+
+class Mountain extends Rock{
+	Mountain(){
+		super("asdasd");
+		System.out.println(1);
+
+	}
+	Mountain(int g){
+		this();
+		System.out.println(g);
+	}
+	
+}
+
+
+public class quizEx {
+
+	public static void main(String[] args) {
+		
+		Mountain tree = new Mountain(123);
+		
+		
+
+
+
+
+	}
+}
