@@ -1,0 +1,26 @@
+package oop.nestedclass;
+
+class Shark {
+	void eat() {
+		System.out.println("Seal");
+	}
+}
+
+public class testNestedClassEx4 {
+
+	public static void main(String[] args) {
+		/*
+		 * 1.Nested class
+		 * 2.Extends
+		 * 3.Override
+		 * 
+		 */
+		new Shark() {
+			void eat() {
+				System.out.println("Fish");
+			}
+		}.eat();
+
+	}
+
+}
