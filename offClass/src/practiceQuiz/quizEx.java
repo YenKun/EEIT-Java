@@ -14,6 +14,16 @@ interface C1 extends A,C{
 	void doC1Stuff();
 }
 
+class a {
+	
+}
+
+class b extends a{
+	
+}
+
+
+
 class D implements C1,A,B,C{
 
 	@Override
@@ -44,7 +54,12 @@ class D implements C1,A,B,C{
 
 public class quizEx{
 	public static void main(String [] args) {
+		a a1= new a();
+		b b1 = new b();
 		
+		
+		a a2 = (a)b1;
+		b b2 = (b)a1;
 
 
 

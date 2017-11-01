@@ -6,4 +6,11 @@
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="java.lang.Throwable"/>
 <fullyQualifiedTypeName name="interfaces.testInterfaceEx1"/>
+<fullyQualifiedTypeName name="oop.nestedclass.A"/>
+<fullyQualifiedTypeName name="oop.nestedclass.A.B"/>
+<fullyQualifiedTypeName name="oop.nestedclass.C.D"/>
+<fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
