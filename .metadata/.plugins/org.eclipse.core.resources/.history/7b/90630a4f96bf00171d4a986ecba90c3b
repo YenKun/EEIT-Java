@@ -1,0 +1,14 @@
+package oop.thread;
+
+class myThread implements Thread{
+	
+}
+
+public class CallTestThreadEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

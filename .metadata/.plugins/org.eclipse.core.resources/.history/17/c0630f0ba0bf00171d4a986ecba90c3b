@@ -1,0 +1,26 @@
+package oop.io;
+
+class maze{
+	private int x = 0;
+	private int y = 0;
+	
+	public void move(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void check() {
+		if(x==0&&y==0) {
+			System.exit(-1);
+		}
+	}
+}
+
+public class testSyncronizedEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
