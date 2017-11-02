@@ -1,0 +1,10 @@
+package oop.io;
+
+public class testFileObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

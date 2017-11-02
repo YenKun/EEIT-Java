@@ -1,0 +1,14 @@
+package oop.io;
+
+import java.io.File;
+
+public class testFileObject {
+
+	public static void main(String[] args) {
+		File file1 = new File("c:/temp/test/hello.txt");
+		boolean status = file1.exists();
+		
+
+	}
+
+}
