@@ -2,3 +2,5 @@
 1509521099208	Encapsulate field 'I'
 1509521252406	Encapsulate field 'i2'
 1509521286888	Encapsulate field 'i3'
+1509586992813	Rename type 'testFileObject'
+1509589174450	Rename type 'testFileIOStreamEx1'

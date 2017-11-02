@@ -1,0 +1,22 @@
+package oop.io;
+
+
+import java.io.FileReader;
+
+public class testFileCharStreamIOEx1 {
+	public static void main(String[] args)  {
+		FileReader fr = new FileReader("c:/temp/test/source.txt");
+		
+		int data;
+		
+		while((data = fr.read())!=-1) {
+			System.out.println(data);
+		}
+		fr.close();
+		
+		
+		
+		
+	}
+
+}
