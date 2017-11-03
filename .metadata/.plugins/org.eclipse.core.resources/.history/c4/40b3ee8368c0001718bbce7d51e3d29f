@@ -1,0 +1,37 @@
+package practiceRandom;
+
+public class RandomPracticeEx3 implements Runnable{
+
+	private int score;
+
+	private void print() {
+		assert (score >= 0) : "ERROR";
+		if (score >= 60) {
+			System.out.println("pass");
+		} else {
+			System.out.println("fail");
+		}
+
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void main(String[] args) throws Throwable {
+		RandomPracticeEx3 Xin = new RandomPracticeEx3();
+		Xin.setScore(-5);
+		Xin.print();
+		
+		Thread t1 = new Thread(new RandomPracticeEx3());
+		t1.start();
+
+	}
+
+
+}

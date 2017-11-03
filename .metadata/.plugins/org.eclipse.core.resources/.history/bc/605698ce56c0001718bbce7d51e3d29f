@@ -1,0 +1,19 @@
+package practiceRandom;
+
+public class RandomPracticeEx2 {
+
+	public static void main(String[] args) {
+		RandomPracticeEx2 te = new RandomPracticeEx2();
+		try {
+			te.test(0);
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void test(int x) throws ArithmeticExceptions{
+		if (x == 0) {
+			throw new ArithmeticException("我認為0是錯誤！！！");
+		}
+	}
+}

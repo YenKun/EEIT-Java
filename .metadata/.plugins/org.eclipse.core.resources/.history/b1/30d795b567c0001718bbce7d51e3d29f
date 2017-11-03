@@ -1,0 +1,27 @@
+package practiceRandom;
+
+public class RandomPracticeEx3 {
+
+	private int score;
+
+	private void print() {
+		assert (score >= 0) : "ERROR";
+		if (score >= 60) {
+			System.out.println("pass");
+		} else {
+			System.out.println("fail");
+		}
+
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public static void main(String[] args) throws Throwable {
+		RandomPracticeEx3 Xin = new RandomPracticeEx3();
+		Xin.setScore(-5);
+		Xin.print();
+
+	}
+}

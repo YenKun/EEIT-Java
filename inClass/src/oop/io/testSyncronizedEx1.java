@@ -4,17 +4,17 @@ class maze {
 	private int x = 0;
 	private int y = 0;
 
-	public void move(int x, int y) {
-		synchronized (this) {
+	public synchronized void move(int x, int y) {
+		//synchronized (this) {
 			this.x = x;
 			this.y = y;
 			System.out.println("x:" + x + " y:" + y);
 			this.notify();
-		}
+		//}
 	}
 
-	public void check() {
-		synchronized (this) {
+	public synchronized void check() {
+		//synchronized (this) {
 			try {
 				this.wait();
 
@@ -26,7 +26,7 @@ class maze {
 				e.printStackTrace();
 			}
 
-		}
+		//}
 	}
 }
 

@@ -1,0 +1,25 @@
+package practiceRandom;
+
+class grade {
+	private int score;
+
+	private void print() {
+		if (score >= 60) {
+			System.out.println("pass");
+		} else {
+			System.out.println("fail");
+		}
+
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+}
+
+public class RandomPracticeEx3 {
+
+	public static void main(String[] args) throws Throwable {
+
+	}
+}

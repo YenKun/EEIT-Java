@@ -1,0 +1,17 @@
+package practiceRandom;
+
+public class RandomPracticeEx1 {
+
+	public static void main(String[] args) {
+		
+		
+		Character a =new Character('3');
+		Integer b = new Integer(4);
+		System.out.println(a+b);
+				
+		
+
+
+	}
+
+}

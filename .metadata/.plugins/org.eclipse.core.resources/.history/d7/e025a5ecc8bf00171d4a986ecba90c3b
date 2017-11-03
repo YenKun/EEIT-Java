@@ -1,0 +1,17 @@
+package practiceRandom;
+
+public class RandomPracticeEx1 {
+
+	public static void main(String[] args) {
+		int a[] = new int [3];
+		if(1==2) {
+		System.out.println();}
+		boolean l = true;
+		boolean 2 = true;
+				
+		
+
+
+	}
+
+}

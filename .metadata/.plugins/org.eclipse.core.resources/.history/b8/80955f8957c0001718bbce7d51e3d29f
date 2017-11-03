@@ -1,0 +1,24 @@
+package practiceRandom;
+
+public class RandomPracticeEx2 {
+
+	public static void main(String[] args) {
+		RandomPracticeEx2 te = new RandomPracticeEx2();
+		try {
+			te.test(0);
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		} catch(RuntimeException e2) {
+			e2.printStackTrace();
+		}
+	}
+
+	public void test(int x) throws RuntimeException{
+		if (x == 0) {
+			throw new ArithmeticException("我認為0是錯誤！！！");
+		}
+		if(x == 1) {
+			throw new RuntimeException("Error");
+		}
+	}
+}

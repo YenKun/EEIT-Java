@@ -1,0 +1,18 @@
+package practiceRandom;
+
+
+
+public class RandomPracticeEx2 {
+
+	public static void main(String[] args)  {
+		RandomPracticeEx2 te = new RandomPracticeEx2();
+	    try{
+	        int x = 5/0;
+	    } catch(Exception e){
+	        e.printStackTrace();
+	    }
+	    System.out.println("END");
+
+	}
+
+}
