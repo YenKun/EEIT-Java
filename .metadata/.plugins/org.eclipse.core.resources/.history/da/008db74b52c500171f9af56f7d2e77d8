@@ -1,0 +1,40 @@
+package practiceRandom;
+
+
+
+class father {
+	 void fmethod() throws Exception{
+		System.out.println("im father");
+	}
+	public void fmethod(int x) {
+		System.out.println(x);
+	}
+}
+
+class son extends father{
+	@Override
+	void fmethod() throws Exception{
+		try {
+		System.out.print("im son");
+		throw new Exception();
+		}catch(Exception e) {
+			e.fillInStackTrace();
+		}
+		
+	}
+}
+
+
+
+public class RandomPracticeEx {
+	
+	public static void main(String args[]) {
+		son s1 = new son();
+		try {
+		s1.fmethod();
+		}catch(Exception e) {
+			System.out.println("00");
+		}
+	}
+
+}

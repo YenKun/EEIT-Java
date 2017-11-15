@@ -1,0 +1,26 @@
+package practiceRandom;
+
+class play<T>{
+	T a;
+	private T b;
+	play(T a,T b){
+		this.a = a;
+		this.b = b;
+	}
+	public void  print() {
+		System.out.println(a);
+		System.out.print(b);
+;	}
+}
+
+public class RandomPracticeEx4 {
+	
+	public static void main(String args[]) {
+		
+		play<Integer> P = new play<Integer>(12,6);
+		System.out.println(Integer.toString(P.a)+8);
+
+
+	}
+
+}

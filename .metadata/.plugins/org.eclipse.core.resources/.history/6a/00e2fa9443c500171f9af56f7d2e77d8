@@ -1,0 +1,26 @@
+package practiceRandom;
+
+import java.rmi.AccessException;
+
+class father {
+	void fmethod() throws Exception{
+		System.out.println("im father");
+	}
+}
+
+class son extends father{
+	@Override
+	void fmethod() throws Exception{
+		System.out.print("im son");
+	}
+}
+
+public class RandomPracticeEx {
+	
+	public static void main(String args[]) throws Exception{
+		son s1 = new son();
+		s1.fmethod();
+		
+	}
+
+}

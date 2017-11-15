@@ -1,0 +1,41 @@
+package practiceRandom;
+
+
+
+class father {
+	 void fmethod() {
+		System.out.println("im father");
+	}
+	public void fmethod(int x) {
+		System.out.println(x);
+	}
+}
+
+class son extends father{
+	@Override
+	void fmethod() {
+		System.out.print("im son");
+		
+	}
+}
+
+
+
+public class RandomPracticeEx {
+	
+	public static void main(String args[]) {
+		son s = new son();
+		father f =(father)s;
+		f.fmethod();
+		
+//		father f1 = new father();
+//		son s1 = (son)f1;
+//		s1.fmethod();
+		
+//		father f1 = new son();
+//		son s1 = (son)f1;
+//		s1.fmethod();
+		
+	}
+
+}
