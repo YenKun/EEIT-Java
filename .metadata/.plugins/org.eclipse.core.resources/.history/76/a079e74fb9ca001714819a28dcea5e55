@@ -1,0 +1,18 @@
+package practiceRandom;
+
+
+
+public class RandomPracticeEx5 {
+	
+	public static void main(String args[]) {
+		
+		String s = "dasdas.dad.dasa.ds.da";
+		String[] k = s.split("..");
+		for(String a : k) {
+			System.out.println(a);
+		}
+
+		
+	}
+
+}

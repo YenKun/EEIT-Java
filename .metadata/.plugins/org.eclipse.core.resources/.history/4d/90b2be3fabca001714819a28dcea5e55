@@ -1,0 +1,46 @@
+package practiceRandom;
+
+class Input {
+	String originalData = "SELECT    ename,salary,hahaha FROM employee";
+
+	String[] processData() {
+		String[] p1 = originalData.split(" ");
+		return p1;
+
+	}
+}
+
+public class RandomPracticeEx4 {
+
+	public static void main(String args[]) {
+		int start = 0;
+		int end;
+		for (int i = 0; i < new Input().processData().length; i++) {
+			
+			Input k = new Input();
+			String[] x = k.processData();
+			if(x[i].equals(" ")) {continue;}
+			if (x[i].equalsIgnoreCase("select")) {
+				if (x[i] != " ") {
+					System.out.println(x[i]);
+				}
+				start = i + 1;
+			}
+			if (x[i].equalsIgnoreCase("from")) {
+				if (x[i] != " ") {
+					System.out.println(x[i + 1]);
+				}
+				for (int i2 = start; i2 < i; i2++) {
+					String[] col = x[i2].split(",");
+					for (String CO : col) {
+						System.out.println(CO);
+					}
+
+				}
+			}
+
+		}
+
+	}
+
+}

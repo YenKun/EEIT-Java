@@ -1,0 +1,52 @@
+package practiceRandom;
+
+class Data{
+	String source = "SELECT name,date FROM employee";
+	String[] processData() {
+		String p1 = source.trim();
+		String[] p2 = p1.split(" ");
+		return p2;
+	}
+
+}
+
+public class RandomPracticeEx5 {
+
+	public static void main(String args[]) {
+		int start = 0;
+		int bp = 0;
+		String[] data = new Data().processData();
+		for(int i = 0;i<data.length;i++) {
+			if(data[i].equals("")) {
+				continue;
+			}
+			if(data[i].equalsIgnoreCase("select")) {
+				System.out.println(data[i]);
+				start = i+1;				
+			}
+			if(data[i].equalsIgnoreCase("from")) {
+				bp = i;
+				while(data[i+1].equals("")) {i++;}
+				System.out.println(data[i+1]);
+				for(int k = start;k<bp;k++) {
+					String adj = data[k].trim();
+					String[] fin = adj.split(",");
+					for(String ans:fin) {
+						System.out.println(ans.trim());
+					}
+				}
+				
+				
+				
+				
+				
+				
+			}
+		}
+		
+		
+		
+
+	}
+
+}

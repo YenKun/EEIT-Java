@@ -1,0 +1,20 @@
+package practiceRandom;
+
+class Input {
+	String source = "SELECT ename,date,salary FROM employee";
+
+	String[] processData() {
+		String p1 = source.trim();
+		String[] p2 = p1.split("");
+		return p2;
+	}
+}
+
+public class RandomPracticeEx5 {
+
+	public static void main(String args[]) {
+		
+
+	}
+
+}
