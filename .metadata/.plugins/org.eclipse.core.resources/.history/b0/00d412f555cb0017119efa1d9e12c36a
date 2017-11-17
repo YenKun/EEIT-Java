@@ -1,0 +1,30 @@
+package practiceRandom;
+
+/*
+ * get data from SQl command with specific order indicates as follows
+ * (ignore space and spaces)
+ * 
+ * select
+ * table name
+ * column names
+ * 
+ * 
+ * 2017.11.17 11:17
+ * 
+ */
+
+class Data{
+	String source = "SELECT ename,bdate FROM employee";
+	void processData() {
+		
+	}
+}
+
+
+public class RandomPracticeEx4 {
+
+	public static void main(String args[]) {
+		
+	}
+
+}

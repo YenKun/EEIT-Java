@@ -1,0 +1,22 @@
+package practiceRandom;
+
+
+
+
+
+
+
+public class RandomPracticeEx5 {
+	
+	public static void main(String args[]) {
+		
+		String test = "abc   dse fg gj  ";
+		String[] fin = test.split(" +");
+		for(String ans : fin) {
+			System.out.println(ans);
+		}
+	
+		
+	}
+
+}

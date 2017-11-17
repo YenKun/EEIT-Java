@@ -15,7 +15,7 @@ public class GetLoadedDriverNames {
 		ResultSet result = st.executeQuery(sqlCommand);
 		while (result.next()) {
 			System.out.println(result.getString(1) + " : " + result.getDouble(2));
-	
+
 		}
 
 	}
