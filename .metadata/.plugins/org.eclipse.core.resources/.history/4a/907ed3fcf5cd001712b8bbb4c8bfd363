@@ -23,7 +23,7 @@ public class pracBlob {
 		PreparedStatement ps = conn.prepareStatement("SELECT * From blobtest");
 		ResultSet rs = ps.executeQuery();
 		
-		//delete data from the table if it already exists
+		//delete date from the table if it already exists
 		
 		if (rs.next()) {
 			ps = conn.prepareStatement("DELETE FROM blobtest where name =?");
