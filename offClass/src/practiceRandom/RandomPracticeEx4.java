@@ -15,7 +15,7 @@ package practiceRandom;
  */
 
 class Data {
-	String source = "   SELECT   ename  ,  bdate FROM    employee";
+	String source = "   SELECT   ename  ,  bdate FROM    employee   ";
 
 	String[] processData() {
 		String p1 = source.trim();
@@ -44,8 +44,7 @@ public class RandomPracticeEx4 {
 					System.out.println(init[k]);
 				}
 				System.out.println("----------------");
-				System.out.println("Finished");
-
+				System.out.println("Finished");				
 			}
 
 		}

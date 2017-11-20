@@ -1,0 +1,64 @@
+package practiceRandom;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+
+
+public class RandomPracticeEx5setDate {
+	
+	public static void main(String args[]) throws SQLException {
+		java.util.Date today = new java.util.Date();
+		SimpleDateFormat sdf= new SimpleDateFormat("yyyy/MM/dd");
+		System.out.println(sdf.format(today));
+		
+		//fit JDBC getDate
+		
+		java.sql.Date today2 = new java.sql.Date(System.currentTimeMillis());
+		System.out.println(today2);
+		
+		java.sql.Date today3 = new java.sql.Date(new java.util.Date().getTime());
+		System.out.println(today3);
+		
+		
+		
+		//JDK1.8
+		
+		java.time.LocalDate today4 = java.time.LocalDate.now();
+		System.out.println(today4);
+		
+		
+		//SQL
+		
+		Connection conn = null;
+		String connUrl = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		conn = DriverManager.getConnection(connUrl, "sa", "passw0rd");
+		
+		String insStmt = "INSERT INTO employee VALUES (?, ?, getDate(), ?, ?, ?)";
+		String delStmt = "DELETE employee WHERE empno=?";
+		PreparedStatement pstmtd = conn.prepareStatement(delStmt);
+		pstmtd.setInt(1, 1009);
+		int num1 = pstmtd.executeUpdate();
+		System.out.println("delete count = " + num1);
+		PreparedStatement pstmt = conn.prepareStatement(insStmt);
+		pstmt.setInt(1, 1009);
+		pstmt.setString(2, "Jean Tsao");
+		//pstmt.setString(3, "2008/10/10");
+		pstmt.setDouble(3, 55000);
+		pstmt.setInt(4, 100);
+		pstmt.setString(5, "senior engineer");
+		int num = pstmt.executeUpdate();
+		System.out.println("insert count = " + num);
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()) {
+			System.out.print("name = " + rs.getString("ename") + ", ");
+			System.out.print("date = " + rs.getString("date") + ", ");
+			System.out.println("salary = " + rs.getDouble("salary"));
+		}
+		
+	}
+
+}

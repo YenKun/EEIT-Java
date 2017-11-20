@@ -1,10 +1,10 @@
 package practiceRandom;
 
+
 public class RandomPracticeEx {
 	
-	public static void main(String args[]) {
-		
-		
+	public static void main(String args[])  {
+
 	}
 
 }

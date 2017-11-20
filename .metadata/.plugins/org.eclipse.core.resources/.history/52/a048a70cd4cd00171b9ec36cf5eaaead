@@ -1,0 +1,52 @@
+package practiceJDBC;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.sql.Blob;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class pracBlob {
+
+	public static void main(String[] args) throws SQLException, IOException {
+
+		String input = args[0];
+		String output = args[1];
+
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		String stmt = "SELECT * FROM blobtest";
+		String dstmt = "DELETE FROM blobtest WHERE name is not null";
+		String instmt = "Insert into blobtest values(?,?)";
+		Connection conn = DriverManager.getConnection(conURL, "sa", "passw0rd");
+		PreparedStatement ps = conn.prepareStatement(stmt);
+		ResultSet rs = ps.executeQuery();
+		if (rs.next()) {
+			PreparedStatement ps2 = conn.prepareStatement(dstmt);
+			ps2.executeUpdate();
+			System.out.println("Delete Succeed");
+		}
+		File f = new File(input);
+		FileInputStream fis = new FileInputStream(f);
+		PreparedStatement ps3 = conn.prepareStatement(instmt);
+		ps3.setString(1, f.getPath());
+		ps3.setBlob(2, fis, f.length());
+		ps3.executeUpdate();
+		ResultSet rs2 = ps.executeQuery();
+		if (rs2.next()) {
+			System.out.println("Insert Suceed");
+			Blob b = rs2.getBlob(2);
+			byte[] data = b.getBytes(1, (int) b.length());
+			FileOutputStream fos = new FileOutputStream(output);
+			fos.write(data, 0, (int) b.length());
+			fos.close();
+			fis.close();
+		}
+
+	}
+
+}

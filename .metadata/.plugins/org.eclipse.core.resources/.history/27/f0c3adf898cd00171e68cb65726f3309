@@ -1,0 +1,13 @@
+package practiceRandom;
+
+import java.util.Date;
+
+public class RandomPracticeEx5setDate {
+	
+	public static void main(String args[]) {
+		Date today = new Date();
+		
+		
+	}
+
+}

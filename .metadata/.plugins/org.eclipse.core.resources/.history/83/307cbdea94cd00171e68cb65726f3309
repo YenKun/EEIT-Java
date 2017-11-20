@@ -1,0 +1,48 @@
+package com.iii.eeit.kuny;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Calendar;
+import java.util.Date;
+
+// Update employee data
+public class UpdateDemo2 {
+	public static void main(String[] args) {
+		Calendar d = Calendar.getInstance();
+		System.out.println(d);
+		Connection conn = null;
+		try {     
+			String connUrl = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+			conn = DriverManager.getConnection(connUrl, "sa", "passw0rd");
+			
+			String updStmt = "UPDATE employee SET salary=? WHERE empno=?";
+			PreparedStatement pstmt = conn.prepareStatement(updStmt);
+			pstmt.setDouble(1, 58000);
+			pstmt.setInt(2, 1009);
+			int num = pstmt.executeUpdate();
+			System.out.println("update count = " + num);
+			
+			String qryStmt = "SELECT * FROM employee WHERE empno=?";
+			pstmt = conn.prepareStatement(qryStmt);
+			pstmt.setInt(1, 1009);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				System.out.print("name = " + rs.getString("ename") + ", ");
+				System.out.println("salary = " + rs.getDouble("salary"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (conn != null)
+				try {
+					conn.close();
+				} catch(SQLException e) { 
+					e.printStackTrace();
+				}
+		}
+	}// end of main()
+}// end of class UpdateDemo

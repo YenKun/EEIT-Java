@@ -1,0 +1,20 @@
+package practiceJDBC;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class practiceStoredProcedure {
+
+	public static void main(String[] args) throws SQLException {
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		String sql = "{call upd_emp_salary(?, ?)}";
+		Connection conn = DriverManager.getConnection(conURL,"sa","passw0rd");
+		CallableStatement cstmt = conn.prepareCall(sql);
+		cstmt.setDouble(1, 44000);
+		cstmt.setInt(2, 1002);
+		cstmt.execute();
+	}
+
+}

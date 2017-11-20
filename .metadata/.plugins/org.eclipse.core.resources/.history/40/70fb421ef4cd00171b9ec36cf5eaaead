@@ -1,0 +1,15 @@
+package practiceRandom;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class RandomPracticeEx {
+	
+	public static void main(String args[]) throws SQLException {
+		String connUrl = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		Connection conn= DriverManager.getConnection(connUrl,"sa","passw0rd");
+		
+	}
+
+}

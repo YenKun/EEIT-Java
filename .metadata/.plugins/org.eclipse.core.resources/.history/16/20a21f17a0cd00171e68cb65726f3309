@@ -1,0 +1,7 @@
+package snippet;
+
+public class Snippet {
+	int num = pstmt.executeUpdate();
+				System.out.println("insert count = " + num);
+}
+

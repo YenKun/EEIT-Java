@@ -1,0 +1,34 @@
+package practiceJDBC;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Types;
+
+public class practiceStoredProcedure {
+
+	public static void main(String[] args) throws SQLException {
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		String sqlup = "{call upd_emp_salary(?, ?)}";
+		String sqlget = "{call qry_emp(?,?,?)}";
+		Connection conn = DriverManager.getConnection(conURL,"sa","passw0rd");
+		CallableStatement cstmt = conn.prepareCall(sqlup);
+		cstmt.setDouble(1, 44000);
+		cstmt.setInt(2, 1003);
+		cstmt.execute();
+		cstmt = conn.prepareCall(sqlget);
+		cstmt.setInt(1,1002);
+		cstmt.registerOutParameter(2, Types.VARCHAR);
+		cstmt.registerOutParameter(3, Types.DOUBLE);
+		cstmt.execute();
+		System.out.println(cstmt.getString(2));
+		System.out.println(cstmt.getDouble(3));
+		cstmt.getConnection().prepareCall("{call get_emp_hiredate(?,?)}");
+		cstmt.setInt(2, 1006);
+		cstmt.registerOutParameter(1, Types.VARCHAR);
+		cstmt.execute();
+		System.out.println(cstmt.getString(1));
+	}
+
+}

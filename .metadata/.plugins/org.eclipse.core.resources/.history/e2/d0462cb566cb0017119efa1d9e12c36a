@@ -1,0 +1,25 @@
+package practice;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class pracetice1 {
+
+	public static void main(String[] args) throws SQLException {
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		String sqlCommand = "SELECT*FROM employee where salary>?";
+		Connection conn = DriverManager.getConnection(conURL, "sa", "passw0rd");
+		PreparedStatement ps = conn.prepareStatement(sqlCommand);
+		ps.setInt(1,5000);
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+
+			System.out.println(rs.getString(1) + " : " + rs.getString(2) + " : " + rs.getString(3) + " : "
+					+ rs.getString(4) + " : " + rs.getString(5));
+		}
+	}
+
+}
