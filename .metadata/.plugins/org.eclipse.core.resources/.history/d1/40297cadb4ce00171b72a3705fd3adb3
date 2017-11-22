@@ -1,0 +1,56 @@
+package practiceJDBC;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+
+public class praceReadFileToDB {
+
+	public static void main(String[] args) throws IOException, SQLException {
+		FileInputStream fr = new FileInputStream("E:/employee.txt");
+
+		String s = "";
+		int data;
+		while ((data = fr.read()) != -1) {
+			s = s + ((char) data);
+		}
+		s = s.trim();
+		String[] s1 = s.split("\r\n");
+		System.out.println(s1.length);
+		int i =1;
+		for(String k:s1) {
+			System.out.println(k+": "+i);
+			i++;
+		}
+		fr.close();
+		
+		
+		
+		
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=JDBC";
+		Connection conn = DriverManager.getConnection(conURL,"sa","passw0rd");
+		PreparedStatement ps = conn.prepareStatement("select * from emp");
+		ResultSet rs = ps.executeQuery();
+		ResultSetMetaData rsmt = rs.getMetaData();
+		int count = rsmt.getColumnCount();
+		ps = conn.prepareStatement("INSERT INTO emp VALUES (?,?,?,?,?,?)");
+		
+
+		for(int j =1;j<s1.length;j++) {
+			String[] res =s1[j].split(",");
+			System.out.println(res.length);
+//			for(int h = 0;h<=res.length;h++) {
+//				ps.setString(h+1, res[h]);
+//			}	
+		}
+		
+//		ps.executeUpdate();
+
+	}
+
+}

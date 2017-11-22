@@ -1,0 +1,11 @@
+empno,ename,hiredate,salary,deptno,title
+1001,Pam Pan,2010-11-10 00:00:00.0,6000.00,100,senior engineer
+1002,Lily Lee,2008-03-22 00:00:00.0,6000.00,100,engineer
+1003,Stephen Hsu,2006-08-14 00:00:00.0,6000.00,200,manager
+1004,May Wu,2011-04-04 00:00:00.0,6000.00,300,manager
+1005,Tina Wang,2013-12-25 00:00:00.0,6000.00,200,engineer
+1006,Allen Hu,2007-07-06 00:00:00.0,6000.00,300,senior engineer
+1007,David Ho,2009-09-11 00:00:00.0,6000.00,100,engineer
+1008,Viginia Kuo,2000-05-16 00:00:00.0,6000.00,100,engineer
+1009,Jean Tsao,2017-11-20 12:05:59.823,6000.00,100,senior engineer
+1010,Jean Tsao,2017-11-20 11:56:37.307,1600.00,100,senior engineer

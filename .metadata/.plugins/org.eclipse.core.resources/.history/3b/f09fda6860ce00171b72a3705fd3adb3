@@ -1,0 +1,22 @@
+package practiceRandom;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class RandomPracticeEx {
+	
+	public static void main(String args[]) throws SQLException  {
+		
+		String input = args[0];
+		String output = args[1];
+		
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=jdbc";
+		Connection conn = DriverManager.getConnection(conURL,"sa","passw0rd");
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM blobtest");
+		
+
+	}
+
+}

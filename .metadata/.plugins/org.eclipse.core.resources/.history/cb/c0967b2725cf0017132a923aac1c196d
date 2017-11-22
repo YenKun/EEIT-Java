@@ -1,0 +1,57 @@
+package practiceJDBC;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.sql.Blob;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class pracInsertPhoto {
+
+	public static void main(String[] args) throws SQLException, IOException {
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=JDBC";
+		Connection conn = DriverManager.getConnection(conURL, "sa", "passw0rd");
+		PreparedStatement getCount = conn.prepareStatement("SELECT count(empno) as count FROM employee");
+		PreparedStatement getID = conn.prepareStatement("SELECT empno FROM employee");
+		PreparedStatement ps = conn.prepareStatement("UPDATE employee SET photo=? WHERE empno=?");
+		ResultSet rs = getCount.executeQuery();
+		ResultSet rsID = getID.executeQuery();
+		int count = 0;
+		while (rs.next()) {
+			count = rs.getInt("count");
+		}
+		int[] ID = new int[count];
+
+		while (rsID.next()) {
+			ID[rsID.getRow() - 1] = rsID.getInt(1);
+		}
+
+		for (int i = 0; i < count; i++) {
+			File f = new File("res/" + ID[i] + ".gif");
+			FileInputStream fis = new FileInputStream(f);
+			ps.setInt(2, ID[i]);
+			ps.setBlob(1, fis, f.length());
+			ps.addBatch();
+			System.out.println(ID[i] + "ADDED");
+		}
+		ps.executeBatch();
+		
+		String getPhoto = "SELECT photo from employee";
+		ps = conn.prepareStatement(getPhoto);
+		rs = ps.executeQuery();
+		rs.next();
+		Blob b = rs.getBlob(1);
+		byte[] data = b.getBytes(1, (int)b.length());
+		FileOutputStream fos = new FileOutputStream("E:/001.gif");
+		fos.write(data,0,data.length);
+		fos.close();
+
+	}
+
+}

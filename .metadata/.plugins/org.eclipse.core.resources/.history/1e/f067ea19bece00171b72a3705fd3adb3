@@ -1,0 +1,26 @@
+package practiceJDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class pracInsertPhoto {
+
+	public static void main(String[] args) throws SQLException {
+		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=JDBC";
+		Connection conn = DriverManager.getConnection(conURL, "sa", "passw0rd");
+		PreparedStatement getCount = conn.prepareStatement("SELECT count(empno) as count FROM employee");
+		PreparedStatement ps = conn.prepareStatement("UPDATE employee SET photo=? WHERE empno=?");
+		ResultSet rs = getCount.executeQuery();
+		int count = 0;
+		while(rs.next()) {
+		count = rs.getInt("count");
+		}
+		int[] ID = new int[count];
+		
+	}
+
+}

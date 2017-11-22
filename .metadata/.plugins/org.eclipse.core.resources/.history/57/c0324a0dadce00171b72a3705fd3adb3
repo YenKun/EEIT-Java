@@ -1,0 +1,22 @@
+package practiceJDBC;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class praceReadFileToDB {
+
+	public static void main(String[] args) throws IOException {
+		FileInputStream fr= new FileInputStream("E:/employee.txt");
+		
+		String s = "" ;
+		int data;
+		while((data = fr.read())!=-1) {
+			s=s+((char)data);
+		}
+		s = s.trim();
+		s = s.replaceAll(","," ");
+		String[] s1 = s.split("\\s+");
+			System.out.println(s1.length);
+	}
+
+}
