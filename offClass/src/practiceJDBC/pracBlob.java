@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+
 
 public class pracBlob {
 
@@ -64,6 +67,16 @@ public class pracBlob {
 			fos.close();
 			fis.close();
 		}
+		
+		InputStream fis2 = rs.getBinaryStream(2);
+		FileOutputStream fos2 = new FileOutputStream("E:/new.gif");
+		int data;
+		while((data=fis2.read())!=-1) {
+			fos2.write(data);
+		}
+
+		fos2.close();
+		fis2.close();
 
 	}
 

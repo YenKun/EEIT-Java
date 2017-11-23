@@ -1,0 +1,21 @@
+package practiceQuiz;
+
+interface A {
+	String toString();
+	int toInt();
+}
+
+public class quizEx16 {
+	public static void main(String[] args) {
+		System.out.println(new A() {
+			public int toInt() {
+				return 1;
+			}
+			public String toString() {
+				return "test";
+			}
+			
+		});
+
+	}
+}

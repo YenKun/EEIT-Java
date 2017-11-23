@@ -1,0 +1,28 @@
+package practiceQuiz;
+
+interface A {
+	String toString();
+
+}
+
+class B{
+	public String toString() {return "LAAL";}
+}
+
+public class quizEx16 {
+	public static void main(String[] args) {
+		System.out.println(
+
+				new A() {
+					public String toString() {
+						return "test";
+					}
+				});
+		B b = new B();
+		B c= new B();
+		System.out.println(b);
+		System.out.println(c);
+		
+
+	}
+}

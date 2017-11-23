@@ -30,13 +30,13 @@ public class Quiz2pracExportData {
 			if (i == count) {
 				columnName.add(rsmt.getColumnName(i) + "\r\n");
 			} else {
-				columnName.add(rsmt.getColumnName(i) + "," );
+				columnName.add(rsmt.getColumnName(i) + ",");
 			}
 		}
 
 		while (rs.next()) {
-			for (int i = 1; i <= count ; i++) {
-				if (i == count ) {
+			for (int i = 1; i <= count; i++) {
+				if (i == count) {
 					content.add(rs.getString(i) + "\r\n");
 				} else {
 					content.add(rs.getString(i) + ",");

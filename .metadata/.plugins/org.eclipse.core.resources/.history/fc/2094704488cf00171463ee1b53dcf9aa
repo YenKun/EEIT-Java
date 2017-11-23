@@ -1,0 +1,27 @@
+package practiceQuiz;
+
+interface A {
+	String toString();
+
+}
+
+class B{
+	public void toString() {
+		
+	}
+}
+
+public class quizEx16 {
+	public static void main(String[] args) {
+		System.out.println(
+
+				new A() {
+					public String toString() {
+						return "test";
+					}
+				});
+		System.out.println(new B());
+		
+
+	}
+}

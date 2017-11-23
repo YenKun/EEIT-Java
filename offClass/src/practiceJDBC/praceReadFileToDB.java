@@ -20,7 +20,6 @@ public class praceReadFileToDB {
 		s = s.trim();
 		// in txt file change to another row > \r\n
 		String[] s1 = s.split("\r\n");
-		System.out.println(s1.length);
 		int i = 1;
 		for (String k : s1) {
 			System.out.println(k + ": " + i);
@@ -30,7 +29,7 @@ public class praceReadFileToDB {
 
 		String conURL = "jdbc:sqlserver://localhost:1433;databaseName=JDBC";
 		Connection conn = DriverManager.getConnection(conURL, "sa", "passw0rd");
-		PreparedStatement ps = conn.prepareStatement("INSERT INTO emp VALUES (?,?,?,?,?,?)");
+		PreparedStatement ps = conn.prepareStatement("INSERT INTO emp VALUES (?,?,?,?,?,?,?)");
 
 		for (int j = 1; j < s1.length; j++) {
 			String[] res = s1[j].split(",");
