@@ -1,0 +1,19 @@
+package practiceQuiz;
+
+class A{
+	void a() throws InterruptedException {
+		Object o = new Object();
+		synchronized(Thread.currentThread()) {}
+		o.wait();
+		o.notify();
+	}
+}
+
+
+public class quizEx {
+
+	public static void main(String[] args) {
+
+	}
+
+}

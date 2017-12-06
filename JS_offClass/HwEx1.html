@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  td{
+    border: 3px solid black;
+    width: 100px;
+    text-align: center;
+  }
+  #mainSec{
+    width:60%;
+    margin: 20px auto;
+  }
+  </style>
+  <script>
+  /*
+  Method 1
+  */
+    function dis(){
+      var c = document.getElementById("btn");
+      c.style.display = "none";
+    }
+    function start() {
+      var x = document.createElement("TABLE");
+      x.setAttribute("id", "myTable");
+      document.getElementById("mainSec").appendChild(x);
+      for (var i = 1; i < 10; i++) {
+        var y = document.createElement("TR");
+        y.setAttribute("id", "myTr" + i);
+        document.getElementById("myTable").appendChild(y);
+        for (var j = 1; j < 10; j++) {
+          var z = document.createElement("TD");
+          var t = document.createTextNode(i + " X " + j + " = " + i*j);
+          z.appendChild(t);
+          document.getElementById("myTr" + i).appendChild(z);
+        }
+      }
+    }
+    /*
+    Method 2
+    */
+    document.write("<div style='width:60%;margin:10px auto;'><table><tr>");
+    for(var i = 1;i<10;i++){
+      document.write("<td>");
+      for(var j =1;j<10;j++){
+        document.write(i+" X "+j+" = "+i*j+"<br />");
+      }
+      document.write("</td>");
+    }
+    document.write("</tr></table></div>");
+  </script>
+</head>
+
+<body>
+  <button id="btn" onclick="start(),dis()">ok</button>
+  <div id="mainSec">
+
+  </div>
+
+
+</body>
+
+</html>

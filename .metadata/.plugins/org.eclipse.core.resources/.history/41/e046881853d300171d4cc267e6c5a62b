@@ -1,0 +1,21 @@
+package practiceQuiz;
+
+
+public class quizEx{
+	
+	
+	void play() throws Exception{
+		throw new Exception();
+	}
+	
+	public static void main(String [] args) {
+		quizEx x = new quizEx();
+		try {
+			x.play();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}

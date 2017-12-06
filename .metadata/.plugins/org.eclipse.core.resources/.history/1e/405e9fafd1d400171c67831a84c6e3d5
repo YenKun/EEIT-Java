@@ -1,0 +1,15 @@
+package practiceQuiz;
+
+public class quizEx {
+
+	public static void main(String[] args)  {
+
+		Object obj = new int[] {45,4};
+		int[] sa = (int[])obj;
+		for(int j :sa ) {
+			System.out.println(j);
+		}
+		
+		
+	}
+}

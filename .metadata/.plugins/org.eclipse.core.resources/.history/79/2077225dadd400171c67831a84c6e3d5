@@ -1,0 +1,31 @@
+package practiceQuiz;
+
+class A {
+	int a = 3;
+
+	void add5() {	
+		a+=5;
+		System.out.println(a);
+		System.out.println("f");
+	}
+}
+
+class B extends A {
+	int a = 8;
+
+	void add5() {	
+		this.a+=5;
+		System.out.println(a);
+		System.out.println("b");
+	}
+}
+
+public class quizEx {
+
+	public static void main(String[] args) throws Exception {
+		A test = new B();
+		test.add5();
+		B b = (B)test;
+		System.out.println(test.a);
+	}
+}

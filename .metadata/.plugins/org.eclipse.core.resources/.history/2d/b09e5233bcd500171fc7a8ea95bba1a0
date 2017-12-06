@@ -1,0 +1,11 @@
+package practiceQuiz;
+
+public class quizEx {
+	private static void call() {
+		System.out.println("x");
+	}
+	public static void main(String[] args)  {
+		call();
+
+	}
+}

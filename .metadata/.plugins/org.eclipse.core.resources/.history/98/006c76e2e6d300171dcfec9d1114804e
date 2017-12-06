@@ -1,0 +1,15 @@
+package practiceQuiz;
+
+public class quizEx{
+	int start(int k) {
+		if(k<=2)
+			return 1;
+		else {
+			return start(k)+ start(k-1);
+		}
+		
+	}
+	public static void main(String [] args) throws Exception{
+
+	}
+}

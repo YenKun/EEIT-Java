@@ -1,0 +1,18 @@
+package practiceQuiz;
+
+class A{
+	int k = 1;
+}
+
+class B extends A{
+	int k = 2;
+}
+
+
+public class quizEx {
+
+	public static void main(String[] args) throws Exception {
+		A test = (A)(new B());
+		System.out.println(test.k);
+	}
+}

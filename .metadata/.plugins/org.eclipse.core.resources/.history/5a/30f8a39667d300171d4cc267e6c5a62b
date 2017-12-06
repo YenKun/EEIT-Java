@@ -1,0 +1,10 @@
+package practiceQuiz;
+
+public class quizEx{
+	
+	public static void main(String [] args) throws Exception{
+		StringBuffer s = new StringBuffer("123456789");
+		s = s.insert(1,"5");
+		System.out.println(s);
+	}
+}

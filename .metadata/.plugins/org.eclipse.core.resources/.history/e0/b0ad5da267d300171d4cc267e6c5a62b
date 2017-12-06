@@ -1,0 +1,10 @@
+package practiceQuiz;
+
+public class quizEx{
+	
+	public static void main(String [] args) throws Exception{
+		String s = "This is a test";
+		String [] h = s.split("\s");
+		System.out.println(h.length);
+	}
+}

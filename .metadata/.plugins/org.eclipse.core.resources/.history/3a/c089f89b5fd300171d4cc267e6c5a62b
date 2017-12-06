@@ -1,0 +1,22 @@
+package practiceQuiz;
+
+class A{
+	void play() throws Exception{
+		throw new Exception();
+	}
+}
+class B extends A{
+	void play() {
+		System.out.println("x");
+	}
+}
+
+
+public class quizEx{
+	
+	public static void main(String [] args) throws Exception{
+		A a = new B();
+		a.play();
+
+	}
+}

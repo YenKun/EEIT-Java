@@ -1,0 +1,17 @@
+package practiceQuiz;
+
+public class quizEx{
+	int start(int k) {
+		if(k<=2)
+			return 1;
+		else {
+			return (start(k-1) + start(k-2));
+		}
+		
+	}
+	public static void main(String [] args) throws Exception{
+		for(int i =1;i<50;i++)
+		System.out.println(new quizEx().start(i));
+
+	}
+}

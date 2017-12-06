@@ -1,0 +1,27 @@
+package practiceQuiz;
+
+class A{
+	int k = 1;
+
+	void add() {
+		System.out.println("a");
+	}
+	
+}
+class B extends A{
+	int k = 2;
+	void add() {
+		System.out.println("b");
+	}
+	
+	
+}
+
+
+public class quizEx {
+
+	public static void main(String[] args)  {
+		B bb = new B();
+		((A)new B()).add();
+	}
+}

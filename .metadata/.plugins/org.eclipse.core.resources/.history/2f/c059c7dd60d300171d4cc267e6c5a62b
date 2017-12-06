@@ -1,0 +1,14 @@
+package practiceQuiz;
+
+import java.io.File;
+
+public class quizEx{
+	
+	public static void main(String [] args) throws Exception{
+		File f1 = new File("E:\\","ghost.pdf");
+		File f2 = new File(f1,"E:\\s.pdf");
+		//f.mkdirs();
+		f2.createNewFile();
+
+	}
+}

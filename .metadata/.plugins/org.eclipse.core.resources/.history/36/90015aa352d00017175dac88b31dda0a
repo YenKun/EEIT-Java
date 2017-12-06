@@ -1,0 +1,32 @@
+package practiceQuiz;
+
+class A{
+	void play() {int s =5;};
+	
+}
+
+class B{
+	A a = new A();
+	void j() {
+	A a1 = new A();
+	a1=a;
+	}
+}
+
+class C{
+	
+}
+
+public class quizEx{
+	public static void main(String [] args) {
+		B b =new B();
+		A aa = new A();
+		aa = b.a;
+		
+
+
+
+
+
+	}
+}

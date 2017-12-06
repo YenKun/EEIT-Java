@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+  <div class="main">
+    <form action="#" method="get" enctype="multipart/form-data">
+      <fieldset class="fs">
+        <legend>
+          FORM1
+          <em>
+            (Necessary)
+          </em>
+        </legend>
+        <div class="sec">
+          <label class="title" for="account">姓名:</label><input type="text" name="name" size="6" id="account" autofocus autocomplete="off" placeholder="GUEST" required/>
+        </div>
+        <div class="sec">
+          <label class="title" for="pwd">密碼:</label><input type="password" name="pwd" maxlength="10" size="6" id="pwd" />
+        </div>
+        <div class="sec">
+          <label class="title">性別:</label>
+          <input type="radio" name="gender" value="male" id="male" required/><label for="male">男</label>
+          <input type="radio" name="gender" value="female" id="female" /><label for="female">女</label>
+        </div>
+        <div class="sec">
+          <label class="title">身分證字號:</label>
+          <input type="text" name="id" size="6" maxlength="10" autocomplete="off" pattern="[a-zA-z]{1}[1-2]{1}\d{8}"/>
+        </div>
+      </fieldset>
+      <fieldset class="fs">
+        <legend>
+          ADDRESS
+          <em>
+            (Necessary)
+          </em>
+        </legend>
+        <div class="sec">
+          <label class="title">地址:</label>
+          <select name="address">
+            <option value="TPE">
+              台北市
+            </option>
+            <option value="TPH">
+              新北市
+            </option>
+            <option value="TUC">
+              桃園市
+            </option>
+          </select>
+        </div>
+        <div class="sec">
+          <label class="title" for="add1">完整地址</label>
+          <input type="text" name="add1" size="30" id="add1" />
+        </div>
+      </fieldset>
+      <fieldset class="fs">
+        <legend>
+          FORM2
+        </legend>
+        <div class="sec">
+          <lable class="title">照片</lable>
+          <input type="file" name="file1" multiple/>
+        </div>
+        <div class="sec">
+          <label class="title">興趣:</label>
+          <input type="checkbox" name="hobby" value="sport" id="sport" /><label for="sport">運動</label>
+          <input type="checkbox" name="hobby" value="music" id="music" /><label for="music">音樂</label>
+          <input type="checkbox" name="hobby" value="movie" id="movie" /><label for="movie">電影</label>
+          <input type="checkbox" name="hobby" value="reading" id="reading" /><label for="reading">閱讀</label>
+        </div>
+        <div class="sec">
+          <label class="title" for="memo">COMMENT:</label><textarea cols="40" rows="5" name="memo" id="memo"></textarea>
+        </div>
+      </fieldset>
+      <div class="btn">
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" />
+      </div>
+
+  </div>
+
+  </form>
+
+</body>
+
+</html>
