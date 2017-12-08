@@ -1,0 +1,46 @@
+.main {
+  width: 40%;
+  margin: 50px auto;
+}
+
+.sec {
+  border-bottom: 3px solid #E6E6FA;
+  padding-bottom: 30px;
+  margin: 20px;
+}
+
+.btn {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.title {
+  float: left;
+  text-align: left;
+  width: 20%;
+  font-weight: 600;
+}
+
+.fs {
+  width: 90%;
+  border: 3px solid #D8BFD8;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+.format{
+  font-size: 10px;
+  margin-top: 20px;
+  color:#888888;
+  font-style: italic;
+}
+
+legend {
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+em {
+  color: #FF9797;
+  font-size: 12pt;
+}
