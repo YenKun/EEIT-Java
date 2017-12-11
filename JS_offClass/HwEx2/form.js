@@ -27,12 +27,12 @@ document.getElementById("pwd").addEventListener("focus",
 document.getElementById("pwd").addEventListener("blur",
   function() {
     var pwd = document.getElementById("pwd").value;
-      var reg = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{6,}$/;
-      if (reg.test(pwd)) {
-        document.getElementById("warning2").innerHTML = correctmsg;
-      } else {
-        document.getElementById("warning2").innerHTML = errormsg;
-      }
+    var reg = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{6,}$/;
+    if (reg.test(pwd)) {
+      document.getElementById("warning2").innerHTML = correctmsg;
+    } else {
+      document.getElementById("warning2").innerHTML = errormsg;
+    }
   });
 document.getElementById("date").addEventListener("focus",
   function() {
@@ -40,10 +40,15 @@ document.getElementById("date").addEventListener("focus",
   });
 document.getElementById("date").addEventListener("blur",
   function() {
-    var reg = /^\d{4}\/\d{2}\/\d{2}$/;
+    var reg = /^[1-2]{1}[09]{1}\d{2}\/[01]{1}\d{1}\/[0-3]{1}\d{1}$/;
     var date = document.getElementById("date").value;
     if (reg.test(date)) {
-      document.getElementById("warning3").innerHTML = correctmsg;
+      var dd = new Date(date).getDate();
+      if (dd == (date.substring(date.length - 2))) {
+        document.getElementById("warning3").innerHTML = correctmsg;
+      } else {
+        document.getElementById("warning3").innerHTML = errormsg;
+      }
     } else {
       document.getElementById("warning3").innerHTML = errormsg;
     }
