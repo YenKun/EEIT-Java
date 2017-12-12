@@ -1,0 +1,45 @@
+#bg{
+  height: 90.5vh;
+  overflow: auto;
+  width:100%;
+  background:radial-gradient(ellipse,white,white);
+}
+
+#main{
+  width:70%;
+  margin:auto;
+  height:700px;
+  background-color: white;
+  margin-top: 90px;
+  border-radius: 50px;
+  overflow: auto;
+  display: none; 
+}
+#quiz1{
+  background-color: #DFFFDF;
+}
+#quiz2{
+  background-color:	#FFFFCE;
+}
+#quiz3{
+  background-color:	#FFDAC8;
+}
+#quiz4{
+  background-color:	#D9FFFF;
+}
+#quiz5{
+  background-color:	#EBD6D6;
+}
+
+.f_center{
+  width:30%;
+  height:30px;
+  line-height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+}
+footer{
+  background-color:		#7B7B7B;
+}

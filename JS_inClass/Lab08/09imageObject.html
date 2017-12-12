@@ -8,25 +8,28 @@
         //=============================================================
         //1. 使用<area>物件的id
         //2. 使用 document.getElementsByTagName("area")取得所有area元素
-        //3. 使用 document.querySelectorAll("area")取得所有area元素(slide 93)  
+        //3. 使用 document.querySelectorAll("area")取得所有area元素(slide 93)
         //=============================================================
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("idTaipei").addEventListener("mouseover",mouseOver);//事件繫結
             document.getElementById("idTaipei").addEventListener("mouseover",mouseOut);
-            document.getElementById("idTaipei").addEventListener("mouseover",Click);           
-        });  
+            document.getElementById("idTaipei").addEventListener("mouseover",Click);
+        });
 
-        function mouseOver() {            
-            document.images[0].src = "images/MapTaipei.gif";          
+        
+
+        function mouseOver() {
+            //document.images[0].src = "images/MapTaipei.gif";
+            document.images[0].src = "images/Map" + this.id.substring(2) + ".gif"
         }
 
 
-        function mouseOut() {            
+        function mouseOut() {
             document.images[0].src = "images/map00.gif";
         }
 
 
-        function Click() {            
+        function Click() {
             document.getElementById("mapdiv").innerHTML = "<img src='images/Taipei.gif'/>";
         }
     </script>

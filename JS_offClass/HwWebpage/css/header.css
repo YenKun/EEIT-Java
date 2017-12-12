@@ -8,6 +8,7 @@
   margin: 0 auto;
 }
 .header li{
+  color: #000;
   float:left;
   list-style: none;
   width:15%;
@@ -18,9 +19,24 @@
   font-weight: 600;
 }
 .header li:hover{
-  background-color:#FFF;
-  font-size: 120%;
-  color: #5151A2;
-  font-weight: 800;
   cursor: pointer;
+}
+.header img{
+  display: block;
+  width:60px;
+}
+#h_icon1{
+  display: none;
+}
+#h_icon2{
+  display: none;
+}
+#h_icon3{
+  display: none;
+}
+#h_icon4{
+  display: none;
+}
+#h_icon5{
+  display: none;
 }

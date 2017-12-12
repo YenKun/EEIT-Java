@@ -1,0 +1,34 @@
+#stararea{
+  width:60%;
+  margin: 160px auto 0 auto;
+}
+#stararea:hover{
+  cursor: pointer;
+}
+.star{
+  width:144px;
+}
+#g_text{
+  width:50%;
+  margin: 100px auto;
+  font-size: 48px;
+  text-align: center;
+  visibility: hidden;
+  color:#FF8040;
+}
+#quiz3btn{
+  text-align: center;
+  width:10%;
+  padding: 10px;
+  margin: 80px auto 0 auto;
+  border: 3px solid #9F0050;
+  border-radius: 10px;
+  color:#9F0050;
+  font-size: 18px;
+  font-weight: 800;
+}
+#quiz3btn:hover{
+  background-color: #9F0050;
+  color: #FFF;
+  cursor: pointer;
+}

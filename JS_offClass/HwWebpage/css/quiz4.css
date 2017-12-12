@@ -1,0 +1,33 @@
+#token1,#token2,#token3,#token4,#token5,#token6,#token7,#token8,#token9{
+  border:3px solid 	#8600FF;
+  border-radius: 50%;
+  width:72px;
+}
+#img01,#img02,#img03,#img04,#img05,#img06,#img07,#img08,#img09{
+  display: none;
+  width: 480px;
+  margin: 0 auto;
+}
+.imgarea:hover{
+  cursor: pointer;
+}
+#prev,#play,#pause,#next{
+  width:72px;
+}
+#prev:hover,#play:hover,#pause:hover,#next:hover{
+  cursor: pointer;
+}
+#play{
+  display: none;
+}
+.tokenarea{
+  width:60%;
+  margin: 0 auto;
+}
+.tokenarea:hover{
+  cursor: pointer;
+}
+.btnarea{
+  margin: 30px auto 0 auto;
+  width: 18%;
+}

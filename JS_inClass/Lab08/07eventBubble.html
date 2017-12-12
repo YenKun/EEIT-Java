@@ -7,7 +7,7 @@
         //==============================================================
         //階層式標籤，事件流程分三階段，
         //事件捕獲(capture)階段==>處理目標階段==>事件氣泡(bubbling)階段
-        //============================================================== 
+        //==============================================================
         document.addEventListener("DOMContentLoaded", function () {
             document.addEventListener("click", docClick);
             document.getElementById("iddiv").addEventListener("click",divClick); //事件繫結，事件氣泡(bubbling)
@@ -22,7 +22,14 @@
         //取消事件氣泡bubbling(stopPropagation())
         function divClick(nsEvent) {
             window.alert("div");
-            
+            theEvent = nsevent || event;
+            if(theEvent.stopPropagation){
+              theEvent.stopPropagation();
+            }
+            else{
+              theEvent.cancelBubble = true;
+            }
+
         }
 
         function pClick() {
@@ -30,7 +37,7 @@
         }
 
         function hrefClick() {
-            
+
         }
 
     </script>

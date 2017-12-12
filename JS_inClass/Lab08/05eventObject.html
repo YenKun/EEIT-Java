@@ -23,25 +23,25 @@
             alert(nsevent.type);
             alert(nsevent.button);
         }
-      
+
 
         //JavaScript屬性事件處理程序(IE9以上)
-        document.addEventListener("DOMContentLoaded", function () {  
-            //document.getElementById("idmouse2").addEventListener("mousedown", mouseDown);  //事件繫結           
-            //document.getElementById("idbut").addEventListener("click",CoordXY);           
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("idmouse2").addEventListener("mousedown", mouseDown);  //事件繫結
+            document.getElementById("idbut").addEventListener("click",CoordXY);
         });
 
 
         //JavaScript屬性事件處理程序(IE8以下)
-        //window.onload=function(){
-        //    document.getElementById("idmouse2").onmousedown = mouseDown;
-        //}
-       
+        window.onload=function(){
+           document.getElementById("idmouse2").onmousedown = mouseDown;
+        }
+
 
         //鍵盤事件繫結
-        document.addEventListener("keydown", keyDown);  //大寫鍵，控制鍵        
+        document.addEventListener("keydown", keyDown);  //大寫鍵，控制鍵
         function keyDown(nsevent) {
-            var theEvent = nsevent || window.event;            
+            var theEvent = nsevent || window.event;
             if (theEvent.altKey) alert("ALT");
             if (theEvent.ctrlKey) alert("CTRL");
             if (theEvent.shiftKey) alert("SHIFT");

@@ -3,52 +3,163 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <link rel="shortcut icon" href="res/token.gif">
+  <title>EEIT9918 | Yen Kun</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/quiz1.css" />
+  <link rel="stylesheet" href="css/quiz2.css" />
+  <link rel="stylesheet" href="css/quiz3.css" />
+  <link rel="stylesheet" href="css/quiz4.css" />
+  <link rel="stylesheet" href="css/quiz5.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-<script>
-  function h_icon_in(a){
-    document.getElementById("h_icon"+a).style.display="inline";
-  }
-  function h_icon_out(a){
-    document.getElementById("h_icon"+a).style.display="none";
-  }
-</script>
 
 <body>
   <div class="header">
     <nav>
-      <ul>
+      <ul id="top_bar">
         <li style="background-color:#D8D8EB">
-          <img src="res/github.png" width="60px;" style="display:block">
+          <img src="res/github.png" id="h_icon0">
         </li>
-        <li onmouseover="h_icon_in(1)" onmouseout="h_icon_out(1)">
-          <i class="fa fa-battery-full" style="display:none" id="h_icon1"></i>
-          Multiplication
+        <li id="it1">
+          <i class="fa fa-battery-full" id="h_icon1"></i> Multiplication
         </li>
-        <li onmouseover="h_icon_in(2)" onmouseout="h_icon_out(2)">
-          <i class="fa fa-battery-3" style="display:none" id="h_icon2"></i>
-          Form
+        <li id="it2">
+          <i class="fa fa-battery-3" id="h_icon2"></i> Form
         </li>
-        <li onmouseover="h_icon_in(3)" onmouseout="h_icon_out(3)">
-          <i class="fa fa-battery-2" style="display:none" id="h_icon3"></i>
-          Grading
+        <li id="it3">
+          <i class="fa fa-battery-2" id="h_icon3"></i> Grading
         </li>
-        <li onmouseover="h_icon_in(4)" onmouseout="h_icon_out(4)">
-          <i class="fa fa-battery-1" style="display:none" id="h_icon4"></i>
-          Carousel
+        <li id="it4">
+          <i class="fa fa-battery-1" id="h_icon4"></i> Carousel
         </li>
-        <li onmouseover="h_icon_in(5)" onmouseout="h_icon_out(5)">
-          <i class="fa fa-battery-empty" style="display:none" id="h_icon5"></i>
-          Calender
+        <li id="it5">
+          <i class="fa fa-battery-empty" id="h_icon5"></i> Calender
         </li>
       </ul>
     </nav>
   </div>
+  <div id="bg">
+    <div id="main">
+      <div id="quiz1">
+        <div class="quiz1area">
+          <div id="quiz1table">
+          </div>
+          <div id="quiz1btn">
+            Show Me
+          </div>
+        </div>
+      </div>
+      <div id="quiz2">
+        <div class="quiz2area">
+          <div class="main">
+            <form action="#" method="get" enctype="multipart/form-data">
+              <fieldset class="fs">
+                <legend>
+                  FORM1
+                  <em>
+                    (Necessary)
+                  </em>
+                </legend>
+                <div class="sec">
+                  <label class="title" for="name">姓名:</label><input type="text" name="name" size="10" id="name" placeholder="請輸入姓名" autocomplete="off" required/>
+                  <span id="warning1" class="warn"> </span>
+                  <div class="format">
+                    (1.不可空白2.至少兩個字以上3.必須全部為中文字)
+                  </div>
+                </div>
+                <div class="sec">
+                  <label class="title" for="pwd">密碼:</label><input type="password" name="pwd" maxlength="12" size="10" id="pwd" placeholder="請輸入密碼" />
+                  <span id="warning2" class="warn"> </span>
+                  <div class="format">
+                    (1.不可空白2.至少6個字且必須包含英文字母、數字、特殊字元[!@#$%^&*])
+                  </div>
+                </div>
+                <div class="sec">
+                  <label class="title" for="date">生日:</label><input type="text" name="pwd" maxlength="10" size="10" id="date" placeholder="ex:1970/01/01" />
+                  <span id="warning3" class="warn"> </span>
+                  <div class="format">
+                    (格式:西元年/月/日 yyyy/MM/dd)
+                  </div>
+                </div>
+                <div class="btn">
+                  <input type="submit" value="submit" />
+                  <input type="reset" value="reset" />
+                </div>
+              </fieldset>
+          </div>
+        </div>
+      </div>
+      <div id="quiz3">
+        <div class="quiz3area">
+          <div id="stararea">
+            <img class="star"src="res/star.png" />
+            <img class="star"src="res/star.png" />
+            <img class="star"src="res/star.png" />
+            <img class="star"src="res/star.png" />
+            <img class="star"src="res/star.png" />
+          </div>
+          <div id="g_text">
+            評價<span id="gradeNumber"></span>顆星
+          </div>
+          <div id="quiz3btn">
+            Re-Evaluate
+          </div>
+        </div>
+      </div>
+      <div id="quiz4">
+        <div class="quiz4area">
+          <div class="imgarea">
+            <img id="img01" src="res/img01.png" />
+            <img id="img02" src="res/img02.png" />
+            <img id="img03" src="res/img03.png" />
+            <img id="img04" src="res/img04.png" />
+            <img id="img05" src="res/img05.png" />
+            <img id="img06" src="res/img06.png" />
+            <img id="img07" src="res/img07.png" />
+            <img id="img08" src="res/img08.png" />
+            <img id="img09" src="res/img09.png" />
+          </div>
+          <div class="tokenarea">
+            <img id="token1" src="res/t01.gif"/>
+            <img id="token2" src="res/t02.gif"/>
+            <img id="token3" src="res/t03.gif"/>
+            <img id="token4" src="res/t04.gif"/>
+            <img id="token5" src="res/t05.gif"/>
+            <img id="token6" src="res/t06.gif"/>
+            <img id="token7" src="res/t07.gif"/>
+            <img id="token8" src="res/t08.gif"/>
+            <img id="token9" src="res/t09.gif"/>
+          </div>
+          <div class="btnarea">
+            <img id="prev" src="res/prev.svg" />
+            <img id="play" src="res/play.svg" />
+            <img id="pause" src="res/pause.svg" />
+            <img id="next" src="res/next.svg" />
+          </div>
+        </div>
+      </div>
+      <div id="quiz5">
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="f_center">
+      EEIT9918||顏堃||YenKun
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/quiz1.js"></script>
+  <script type="text/javascript" src="js/quiz2.js"></script>
+  <script type="text/javascript" src="js/quiz3.js"></script>
+  <script type="text/javascript" src="js/quiz4.js"></script>
+  <script type="text/javascript" src="js/quiz5.js"></script>
 </body>
 
 </html>

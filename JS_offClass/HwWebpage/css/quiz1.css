@@ -1,0 +1,40 @@
+.quiz1area{
+  width:80%;
+  height:90%;
+  margin: 40px auto 0 auto;
+  overflow: auto;
+}
+#quiz1table{
+  height:60%;
+  width: 90%;
+  margin: 80px auto 0 auto;
+}
+
+#myTable{
+  margin-top: 80px auto 0 auto;
+  width: 100%;
+}
+td{
+  border: 3px solid #9F0050;
+  text-align: center;
+  font-size: 20px;
+  background-color:#FFF8D7;
+}
+
+#quiz1btn{
+  text-align: center;
+  width:10%;
+  padding: 10px;
+  margin: 80px auto 0 auto;
+  border: 3px solid #9F0050;
+  border-radius: 10px;
+  color:#9F0050;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#quiz1btn:hover{
+  background-color: #9F0050;
+  color: #FFF;
+  cursor: pointer;
+}

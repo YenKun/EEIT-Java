@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>02dragFile.html</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("show").addEventListener("dragover", dragoverHandler);
+            document.getElementById("show").addEventListener("drop", dropHandler);
+        });
+
+        function dragoverHandler(e) {
+
+        }
+
+        function dropHandler(e) {
+
+        }
+    </script>
+</head>
+<body>
+    <!--<textarea cols="60" rows="20" id="show" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></textarea>-->
+    <textarea cols="60" rows="20" id="show"></textarea>
+</body>
+</html>
