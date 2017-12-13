@@ -1,0 +1,20 @@
+.inputBar{
+  margin: 200px auto 0 auto;
+  width: 28%;
+  padding: 20px;
+}
+#monthQ5,#yearQ5,#dateQ5{
+  width: 100px;
+  margin: 0 auto;
+}
+#outputBar{
+  border: 3px solid #642100;
+  border-radius: 20px;
+  font-size: 60px;
+  width: 60%;
+  margin: 100px auto;
+  text-align: center;
+  background-color: #A23400;
+  color:#FFF;
+  padding: 10px;
+}

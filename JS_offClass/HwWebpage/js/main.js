@@ -29,7 +29,8 @@ for (var i = 1; i <= 5; i++) {
 function colorPicker(){
   var a = new Date().getSeconds();
   var sec = Math.floor(a/5);
-  var colors = ["#5B00AE","#930093","#BF0060","#0000C6","#009393","#01B468","#FFF","#EA7500","#6C6C6C","#FFFFDF","	#8CEA00","#9999CC"];
+  var colors = ["#DFFFDF","#FFF8D7","#BF0060","#0000C6","#FFE66F","#01B468",
+                  "#FFF","#EA7500","#D9FFFF","#FFFFDF","#796400","#006000"];
   document.getElementById("bg").style.background="radial-gradient(ellipse,"+colors[sec]+","+colors[11-sec]+")";
 }
 
