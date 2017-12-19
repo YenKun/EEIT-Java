@@ -1,1 +1,0 @@
-﻿document.write("Javascript<br>EEIT99");

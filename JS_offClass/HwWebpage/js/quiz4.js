@@ -1,5 +1,5 @@
 var count = 1;
-var imgTimer;
+var imgTimer = setInterval(changeImg, 1000);
 var link = ["https://wiki.52poke.com/wiki/%E5%A6%99%E8%9B%99%E7%A7%8D%E5%AD%90",
   "https://wiki.52poke.com/wiki/%E5%A6%99%E8%9B%99%E8%8D%89",
   "https://wiki.52poke.com/wiki/%E5%A6%99%E8%9B%99%E8%8A%B1",
@@ -11,37 +11,67 @@ var link = ["https://wiki.52poke.com/wiki/%E5%A6%99%E8%9B%99%E7%A7%8D%E5%AD%90",
   "https://wiki.52poke.com/wiki/%E6%B0%B4%E7%AE%AD%E9%BE%9F"
 ];
 
+document.getElementById("it4").addEventListener("click", changeImg);
 
-imgTimer = setInterval(
-  function() {
-    changeImg();
-  }, 1000);
-
-document.getElementById("it4").addEventListener("click", function() {
-  changeImg()
+document.getElementById("next").addEventListener("click", function() {
+  changeImg();
+  stop();
 });
 
+document.getElementById("prev").addEventListener("click", function() {
+  prevImg();
+  stop();
+})
+
+document.getElementById("play").addEventListener("click", play);
+
+document.getElementById("pause").addEventListener("click", stop);
+
+for (let i = 1; i <= 9; i++) {
+  document.getElementById("token" + i).addEventListener("click", function() {
+    stop();
+    if (count == 1) {
+      before(10 - count);
+    } else {
+      before(count - 1);
+    }
+    after(i);
+    if (i == 9)
+      count = 1;
+    else {
+      count = i + 1;
+    }
+  })
+  document.getElementById("img0" + i).addEventListener("click", function() {
+    open(link[i - 1], "_blank");
+  })
+}
+
+function after(index) {
+  document.getElementById("img0" + index).style.display = "block";
+  document.getElementById("token" + index).style.width = "96px";
+  document.getElementById("token" + index).style.borderColor = "#548C00"
+  document.getElementById("token" + index).style.backgroundColor = "#FFF";
+}
+
+function before(index) {
+  document.getElementById("img0" + index).style.display = "none";
+  document.getElementById("token" + index).style.width = "72px";
+  document.getElementById("token" + index).style.borderColor = "#8600FF";
+  document.getElementById("token" + index).style.backgroundColor = "#D9FFFF";
+}
 
 function changeImg() {
-  document.getElementById("img0" + count).style.display = "block";
-  document.getElementById("token" + count).style.width = "96px";
-  document.getElementById("token" + count).style.borderColor = "#548C00"
-  document.getElementById("token" + count).style.backgroundColor = "#FFF";
+  after(count);
   if (count == 1) {
-    document.getElementById("img0" + 9).style.display = "none";
-    document.getElementById("token" + 9).style.width = "72px";
-    document.getElementById("token" + 9).style.borderColor = "#8600FF";
-    document.getElementById("token" + 9).style.backgroundColor = "#D9FFFF";
+    before(10 - count);
   } else {
-    document.getElementById("img0" + (count - 1)).style.display = "none";
-    document.getElementById("token" + (count - 1)).style.width = "72px";
-    document.getElementById("token" + (count - 1)).style.borderColor = "#8600FF";
-    document.getElementById("token" + (count - 1)).style.backgroundColor = "#D9FFFF";
+    before(count - 1);
   }
-  if (count < 9)
-    count++;
+  if (count == 9)
+    count = 1;
   else {
-    count = 1
+    count++;
   }
 }
 
@@ -51,25 +81,15 @@ function prevImg() {
   } else {
     count = (count - 2) + 9;
   }
-  document.getElementById("img0" + count).style.display = "block";
-  document.getElementById("token" + count).style.width = "96px";
-  document.getElementById("token" + count).style.borderColor = "#548C00";
-  document.getElementById("token" + count).style.backgroundColor = "#FFF";
+  after(count);
   if (count == 9) {
     count = 1;
-    document.getElementById("img0" + count).style.display = "none";
-    document.getElementById("token" + count).style.width = "72px";
-    document.getElementById("token" + count).style.borderColor = "#8600FF";
-    document.getElementById("token" + count).style.backgroundColor = "#D9FFFF";
+    before(count);
   } else {
-    document.getElementById("img0" + (count + 1)).style.display = "none";
-    document.getElementById("token" + (count + 1)).style.width = "72px";
-    document.getElementById("token" + (count + 1)).style.borderColor = "#8600FF";
-    document.getElementById("token" + (count + 1)).style.backgroundColor = "#D9FFFF";
+    before(count + 1)
     count++;
   }
 }
-
 
 function stop() {
   clearInterval(imgTimer);
@@ -78,60 +98,7 @@ function stop() {
 }
 
 function play() {
-  imgTimer = setInterval(
-    function() {
-      changeImg();
-    }, 1000);
+  imgTimer = setInterval(changeImg, 1000);
   document.getElementById("play").style.display = "none";
   document.getElementById("pause").style.display = "inline";
-}
-
-document.getElementById("next").addEventListener("click", function() {
-  stop();
-  changeImg();
-});
-
-document.getElementById("prev").addEventListener("click", function() {
-  prevImg();
-  stop();
-})
-
-document.getElementById("play").addEventListener("click", function() {
-  play();
-})
-
-document.getElementById("pause").addEventListener("click", function() {
-  stop();
-})
-
-for (let i = 1; i <= 9; i++) {
-  document.getElementById("token" + i).addEventListener("click", function() {
-    stop();
-    if (count != 1) {
-      document.getElementById("img0" + (count - 1)).style.display = "none";
-      document.getElementById("token" + (count - 1)).style.width = "72px";
-      document.getElementById("token" + (count - 1)).style.borderColor = "#8600FF";
-      document.getElementById("token" + (count - 1)).style.backgroundColor = "#D9FFFF";
-    } else {
-      document.getElementById("img0" + 9).style.display = "none";
-      document.getElementById("token" + 9).style.width = "72px";
-      document.getElementById("token" + 9).style.borderColor = "#8600FF";
-      document.getElementById("token" + 9).style.backgroundColor = "#D9FFFF";
-    }
-    document.getElementById("img0" + i).style.display = "block";
-    document.getElementById("token" + i).style.width = "96px";
-    document.getElementById("token" + i).style.borderColor = "#548C00";
-    document.getElementById("token" + i).style.backgroundColor = "#FFF";
-    if(i!=9)
-    count = i + 1;
-    else {
-    count = 1;
-    }
-  })
-
-  document.getElementById("img0" + i).addEventListener("click", function() {
-    open().location = link[i - 1];
-  })
-
-
 }

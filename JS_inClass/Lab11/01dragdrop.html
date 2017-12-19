@@ -27,28 +27,34 @@
 
         function dragStartHandler(e) {
             //儲存要拖放的資料
-
+            e.dataTransfer.setData("text/plain",e.target.id);
         }
+
 
 
         function dragoverHandler(e) {
             //取消預設動作
+            e.preventDefault();
         }
 
         function dropHandler(e) {
             //取消預設動作
+            e.preventDefault();
 
             //取出拖放資料
+            var eleID = e.dataTransfer.getData("text/plain");
 
             //建立div元素
-
+            var newD = document.createElement("div");
+            newD.setAttribute("id",eleID);
+            newD.innerHTML = document.getElementById(eleID).innerHTML;
 
             //設定屬性及外觀
 
-
+            newD.setAttribute("class","dragItemStyle")
 
             //新增到dropZone or dropZone1元素後面
-
+            e.currentTarget.appendChild(newD);
 
         }
     </script>
