@@ -1,0 +1,20 @@
+package practiceRandom;
+
+public class AA {
+
+	public static void main(String[] args) {
+		L test1 = new C();
+		L test2 = new L();
+		test1.toString();
+		test2.toString();
+	}
+
+}
+
+class L{
+	
+}
+
+class C extends L{
+	
+}
