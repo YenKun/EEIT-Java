@@ -1,0 +1,64 @@
+<i18n>
+
+Spring的ApplicationContext本身有實作MessageSource介面
+因此只要在ApplicationContext內有設定以下的一段程式
+即可透過(MessageSource的)getMessage方法取得需要的Properties檔內的value值
+
+XML設定
+
+	<context:annotation-config />
+	<context:component-scan base-package="i18n.Annotation"></context:component-scan>
+	
+	<bean id="messageSource"(不能動) class="org.springframework.context.support.ResourceBundleMessageSource"(不能動)>
+		<property name="basename"(不能動) value="i18nAnnotation.Message"(properties檔所存在的位置，以class檔方式表述)></property>
+	</bean>
+	
+	
+	
+	(若有多個Properties檔則以List表示)
+	
+	<context:annotation-config />
+	<context:component-scan base-package="i18n.Annotation"></context:component-scan>
+	
+	<bean id="messageSource"(不能動)
+		class="org.springframework.context.support.ResourceBundleMessageSource"(不能動)>
+		<property name="basenames"(不能動)>
+			<list>
+				<value>model.format(properties檔所存在的位置，以class檔方式表述)</value>
+				<value>model.exceptions(properties檔所存在的位置，以class檔方式表述)</value>
+				<value>model.windows(properties檔所存在的位置，以class檔方式表述)</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+Java設定
+
+	@Configuration
+	@ComponentScan(basePackages = { "i18n" })
+	public class i18nJavaConfig {
+	@Bean
+	public MessageSource(回傳值不能動) messageSource()(方法名稱一定不能動) {
+		ResourceBundleMessageSource rbms = new ResourceBundleMessageSource();
+		rbms.setBasename("i18nXML.Message");
+		return rbms;
+	}
+	
+	(ResourceBundleMessageSource是MessageSource的子類別)
+}
+
+	(若有多個Properties檔則以setBasenames(String k...)表示)
+	
+	
+	@Configuration
+	@ComponentScan(basePackages = { "i18n" })
+	public class i18nJavaMultipleConfig {
+	@Bean
+	public MessageSource messageSource() {
+		ResourceBundleMessageSource rbms = new ResourceBundleMessageSource();
+		rbms.setBasenames("i18nXMLMultiple.Message","i18nXMLMultiple.Data");
+		return rbms;
+	}
+}
+
+
