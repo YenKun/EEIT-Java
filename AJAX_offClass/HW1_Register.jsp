@@ -127,39 +127,7 @@
 			}
 		}
 
-		// 		var btn = document.getElementById("buttonSubmit"), xhr = null;
-		// 		myDiv = document.getElementById("message");
-
-		// 		btn.addEventListener("click", load);
-
-		// 		function load(event) {
-		// 			//檢查看看按鈕的type是不是sumbit
-		// 			//如果是submit按鈕，要透過ajax將資料往Server端傳送
-		// 			//需要取消submit按鈕的預設行為?想想看甚麼是submit的預設行為
-		// 			//_________________________                                 event.preventDefault();
-
-		// 			xhr = new XMLHttpRequest();
-
-		// 			if (xhr != null) {
-
-		// 				xhr.addEventListener("load", function() {
-		// 					if (xhr.status == 200) {
-		// 						myDiv.innerHTML = "<h2>" + xhr.responseText + "</h2>";
-		// 					} else {
-		// 						alert(xhr.status + ":" + xhr.statusText);
-		// 					}
-		// 				})
-
-		// 				//將表單的資料傳入FormData，產生FormData物件
-		// 				//透過POST的方法，將產生的FormData物件透過send()方法傳到Server端
-
-		// 				// 				var formData = new FormData(document.myData);
-		// 				// 				xhr.open("POST", document.myData.action);
-		// 				// 				xhr.send(formData);
-		// 			} else {
-		// 				alert("您的瀏覽器不支援Ajax功能!!");
-		// 			}
-		// 		}
+	
 	</script>
 </body>
 </html>

@@ -51,11 +51,11 @@
 	<script>
 		var xhr = new XMLHttpRequest();
 		var body = document.getElementById("card-body");
-		
-		while(body.hasChildNodes()){
+
+		while (body.hasChildNodes()) {
 			body.removeChild(body.firstChild);
 		}
-		
+
 		if (xhr != null) {
 			xhr.addEventListener("load", read);
 			xhr.open("GET", "LoadRSS");
@@ -73,35 +73,36 @@
 
 				for (var i = 0, max = items.length; i < max; i++) {
 					var links = items[i].getElementsByTagName("link");
-					var descriptions = items[i].getElementsByTagName("description");
+					var descriptions = items[i]
+							.getElementsByTagName("description");
 					var titles = items[i].getElementsByTagName("title");
 					var pubDates = items[i].getElementsByTagName("pubDate");
-					
+
 					var link = links[0].firstChild.nodeValue;
 					var title = titles[0].firstChild.nodeValue;
 					var description = descriptions[0].firstChild.nodeValue;
 					var pubDate = pubDates[0].firstChild.nodeValue;
-					
+
 					var h4 = document.createElement("h4");
 					var a = document.createElement("a");
 					var title_text = document.createTextNode(title);
-					a.setAttribute("href",link);
+					a.setAttribute("href", link);
 					a.appendChild(title_text);
 					h4.appendChild(a);
-					
+
 					var hr = document.createElement("hr");
-					
+
 					var small = document.createElement("small");
 					var pubDate_text = document.createTextNode(pubDate);
 					small.appendChild(pubDate_text);
-					
+
 					var p = document.createElement("p");
 					var description_text = document.createTextNode(description);
 					p.appendChild(description_text);
-					
+
 					var br1 = document.createElement("br");
 					var br2 = document.createElement("br");
-					
+
 					var article = document.createElement("article");
 					article.appendChild(h4);
 					article.appendChild(hr);
@@ -109,16 +110,10 @@
 					article.appendChild(p);
 					article.appendChild(br1);
 					article.appendChild(br2);
-					
+
 					docFrag.appendChild(article);
 				}
-				
 				body.appendChild(docFrag);
-
-				
-
-
-
 			} else {
 				alert(xhr.status);
 			}

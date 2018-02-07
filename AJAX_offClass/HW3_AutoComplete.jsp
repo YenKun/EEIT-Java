@@ -38,10 +38,6 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script>
-		//將資料存到陣列中
-		var datas = [ "aaaaa", "bbbbb", "ccccc", "ddddd", "eeeee", "fffff",
-				"ggggg", "hhhhh", "iiiii", "jjjjj" ];
-
 		var show;
 		var docFrag;
 		window.addEventListener("load", init, false);
@@ -54,8 +50,8 @@
 
 		function getSource() {
 			show.style.display = "block";
-			
-			while(show.hasChildNodes()){
+
+			while (show.hasChildNodes()) {
 				show.removeChild(show.firstChild);
 			}
 
@@ -74,34 +70,39 @@
 		}
 
 		function match(xhr) {
-			var jsonObj = JSON.parse(xhr.responseText);
-			for (key in jsonObj) {
-				var opt = document.createTextNode(jsonObj[key]);
-				var btn = document.createElement("button");
-				btn.className = "list-group-item list-group-item-action";
-				btn.setAttribute("type","button");
-				btn.addEventListener("click",function(){
-					document.myData.keyword.value = this.firstChild.nodeValue;
-					show.style.display="none";
-				});
-				
-				btn.addEventListener("mouseover",function(){
-					this.setAttribute("style","color:red;cursor:pointer");
-				});
-				
-				btn.addEventListener("mouseout",function(){
-					this.setAttribute("style","color:black");
-				});
-				
-				
-				btn.appendChild(opt);
-				docFrag.appendChild(btn);
+			if (xhr.status == 200) {
+
+				var jsonObj = JSON.parse(xhr.responseText);
+				for (key in jsonObj) {
+					var opt = document.createTextNode(jsonObj[key]);
+					var btn = document.createElement("button");
+					btn.className = "list-group-item list-group-item-action";
+					btn.setAttribute("type", "button");
+					btn
+							.addEventListener(
+									"click",
+									function() {
+										document.myData.keyword.value = this.firstChild.nodeValue;
+										show.style.display = "none";
+									});
+
+					btn.addEventListener("mouseover", function() {
+						this.setAttribute("style", "color:red;cursor:pointer");
+					});
+
+					btn.addEventListener("mouseout", function() {
+						this.setAttribute("style", "color:black");
+					});
+
+					btn.appendChild(opt);
+					docFrag.appendChild(btn);
+				}
+				show.appendChild(docFrag);
+			} else {
+				alert(xhr.status);
 			}
-			show.appendChild(docFrag);
 
 		}
-
-
 	</script>
 </body>
 </html>
